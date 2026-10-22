@@ -1,0 +1,32 @@
+{
+  "notice": "Demo registry match - not an official government verification",
+  "record_id": "SYNTH-UP-LKO-2026-0042",
+  "document_type": "Khatauni (ROR - Record of Rights)",
+  "state": "Uttar Pradesh",
+  "district": "Lucknow (Synthetic)",
+  "tehsil": "Bakshi Ka Talab (Synthetic)",
+  "pargana": "Mahona (Synthetic)",
+  "village": "Syntheticpur",
+  "fasli_year": "1430-1435",
+  "khata_number": "00124",
+  "khasra_numbers": ["45/1", "45/2", "46"],
+  "land_area_hectares": 0.4050,
+  "revenue_inr": 18.50,
+  "landholders": [
+    {
+      "name": "Ramesh Kumar (Synthetic Demo)",
+      "parent_name": "Suresh Kumar",
+      "share_fraction": "1/2",
+      "flagged_for_review": false
+    },
+    {
+      "name": null,
+      "parent_name": null,
+      "share_fraction": "1/2",
+      "flagged_for_review": true,
+      "review_reason": "Missing legible co-tenant entry in scanned specimen - set to null"
+    }
+  ],
+  "encumbrances": null,
+  "verified_status": "UNVERIFIED_DEMO_PROTOTYPE"
+}

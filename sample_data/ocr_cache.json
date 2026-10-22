@@ -1,0 +1,4702 @@
+{
+  "sample_01_clean.pdf": [
+    {
+      "page_number": 1,
+      "raw_text": "SYNTHETICDEMORECORD3RFORDEMO/TESTPURPOSESONLY\nBdRRGuHRg(Board of Revenue,UttarPradesh)\nRU(HR/RECORDOFRIGHTS(ROR)\n-TI2006（FormROR-UPRevenueCode2006)\nTl(District):\nLucknow(Synthetic)\nI(Pargana):\nMahona(Synthetic)\nlaRN(FasliYear):\n1430-1435\n(Tehsil):\nBakshiKa Talab(Synthetic)\nR/(Village）:Syntheticpur\n(KhaNo)\n00124\n//h/\n(\n/\n(1)Khata No.\n(2)Landholder&Parent/Spouse\n(3)Khasra No.\n(4) Area (Ha)\n(5)Rev(R)\n(6)Remarks/Orders\n00124\nHR(RameshKumar)HT1/2\n45/1,45/2,46\n0.4050\n18.50\n(SureshKumar)\nHR(DineshKumar)HIT1/2\n/a(SureshKumar)\nnnauslele\nSYNTHETIC DEMO RECORD\nNOTOFFICIALGQVERNMENT RECORD\neacDigitisedCopy-LandRecordsPrototype)\nOOOOOOOOOOOO（DoCumentID）:SYNTH-DOC-OOO\nUPCADASTRE\nalR/ur(RevenueInspector/Lekhpal-SyntheticSignature)\nqHufqRafar\n中h2上h电n中hEb1中\nDEMOREGISTRYMATCH-NOTANOFFICIALGOVERNMENTVERIFICATION",
+      "word_count": 42,
+      "avg_confidence": 85.37,
+      "words": [
+        {
+          "word": "SYNTHETICDEMORECORD3RFORDEMO/TESTPURPOSESONLY",
+          "confidence": 90.65,
+          "bbox": [
+            381,
+            10,
+            1485,
+            47
+          ]
+        },
+        {
+          "word": "BdRRGuHRg(Board of Revenue,UttarPradesh)",
+          "confidence": 87.93,
+          "bbox": [
+            404,
+            77,
+            1463,
+            128
+          ]
+        },
+        {
+          "word": "RU(HR/RECORDOFRIGHTS(ROR)",
+          "confidence": 86.01,
+          "bbox": [
+            504,
+            128,
+            1359,
+            173
+          ]
+        },
+        {
+          "word": "-TI2006（FormROR-UPRevenueCode2006)",
+          "confidence": 82.67,
+          "bbox": [
+            552,
+            174,
+            1314,
+            213
+          ]
+        },
+        {
+          "word": "Tl(District):",
+          "confidence": 86.89,
+          "bbox": [
+            74,
+            236,
+            243,
+            279
+          ]
+        },
+        {
+          "word": "Lucknow(Synthetic)",
+          "confidence": 96.16,
+          "bbox": [
+            289,
+            241,
+            520,
+            278
+          ]
+        },
+        {
+          "word": "I(Pargana):",
+          "confidence": 90.35,
+          "bbox": [
+            665,
+            245,
+            858,
+            275
+          ]
+        },
+        {
+          "word": "Mahona(Synthetic)",
+          "confidence": 98.36,
+          "bbox": [
+            903,
+            243,
+            1127,
+            277
+          ]
+        },
+        {
+          "word": "laRN(FasliYear):",
+          "confidence": 84.02,
+          "bbox": [
+            1264,
+            237,
+            1525,
+            277
+          ]
+        },
+        {
+          "word": "1430-1435",
+          "confidence": 99.78,
+          "bbox": [
+            1571,
+            245,
+            1694,
+            275
+          ]
+        },
+        {
+          "word": "(Tehsil):",
+          "confidence": 82.43,
+          "bbox": [
+            76,
+            284,
+            256,
+            323
+          ]
+        },
+        {
+          "word": "BakshiKa Talab(Synthetic)",
+          "confidence": 96.09,
+          "bbox": [
+            289,
+            287,
+            594,
+            323
+          ]
+        },
+        {
+          "word": "R/(Village）:Syntheticpur",
+          "confidence": 85.34,
+          "bbox": [
+            662,
+            283,
+            1051,
+            325
+          ]
+        },
+        {
+          "word": "(KhaNo)",
+          "confidence": 67.98,
+          "bbox": [
+            1265,
+            284,
+            1524,
+            323
+          ]
+        },
+        {
+          "word": "00124",
+          "confidence": 99.84,
+          "bbox": [
+            1568,
+            289,
+            1645,
+            321
+          ]
+        },
+        {
+          "word": "//h/",
+          "confidence": 57.45,
+          "bbox": [
+            369,
+            374,
+            738,
+            403
+          ]
+        },
+        {
+          "word": "(",
+          "confidence": 55.21,
+          "bbox": [
+            948,
+            375,
+            1090,
+            406
+          ]
+        },
+        {
+          "word": "/",
+          "confidence": 74.97,
+          "bbox": [
+            1426,
+            370,
+            1589,
+            408
+          ]
+        },
+        {
+          "word": "(1)Khata No.",
+          "confidence": 94.62,
+          "bbox": [
+            97,
+            409,
+            202,
+            439
+          ]
+        },
+        {
+          "word": "(2)Landholder&Parent/Spouse",
+          "confidence": 97.5,
+          "bbox": [
+            429,
+            412,
+            677,
+            438
+          ]
+        },
+        {
+          "word": "(3)Khasra No.",
+          "confidence": 89.49,
+          "bbox": [
+            961,
+            411,
+            1075,
+            438
+          ]
+        },
+        {
+          "word": "(4) Area (Ha)",
+          "confidence": 86.81,
+          "bbox": [
+            1240,
+            411,
+            1348,
+            441
+          ]
+        },
+        {
+          "word": "(5)Rev(R)",
+          "confidence": 84.12,
+          "bbox": [
+            1462,
+            411,
+            1553,
+            441
+          ]
+        },
+        {
+          "word": "(6)Remarks/Orders",
+          "confidence": 95.25,
+          "bbox": [
+            1615,
+            408,
+            1784,
+            440
+          ]
+        },
+        {
+          "word": "00124",
+          "confidence": 99.9,
+          "bbox": [
+            88,
+            485,
+            171,
+            515
+          ]
+        },
+        {
+          "word": "HR(RameshKumar)HT1/2",
+          "confidence": 83.81,
+          "bbox": [
+            257,
+            476,
+            673,
+            522
+          ]
+        },
+        {
+          "word": "45/1,45/2,46",
+          "confidence": 97.87,
+          "bbox": [
+            890,
+            485,
+            1059,
+            515
+          ]
+        },
+        {
+          "word": "0.4050",
+          "confidence": 99.88,
+          "bbox": [
+            1196,
+            485,
+            1278,
+            515
+          ]
+        },
+        {
+          "word": "18.50",
+          "confidence": 99.61,
+          "bbox": [
+            1428,
+            481,
+            1511,
+            515
+          ]
+        },
+        {
+          "word": "(SureshKumar)",
+          "confidence": 85.11,
+          "bbox": [
+            270,
+            514,
+            672,
+            559
+          ]
+        },
+        {
+          "word": "HR(DineshKumar)HIT1/2",
+          "confidence": 82.47,
+          "bbox": [
+            258,
+            596,
+            668,
+            643
+          ]
+        },
+        {
+          "word": "/a(SureshKumar)",
+          "confidence": 79.58,
+          "bbox": [
+            270,
+            636,
+            672,
+            679
+          ]
+        },
+        {
+          "word": "nnauslele",
+          "confidence": 53.61,
+          "bbox": [
+            270,
+            670,
+            478,
+            708
+          ]
+        },
+        {
+          "word": "SYNTHETIC DEMO RECORD",
+          "confidence": 95.39,
+          "bbox": [
+            379,
+            1122,
+            1670,
+            1198
+          ]
+        },
+        {
+          "word": "NOTOFFICIALGQVERNMENT RECORD",
+          "confidence": 95.11,
+          "bbox": [
+            426,
+            1229,
+            1393,
+            1279
+          ]
+        },
+        {
+          "word": "eacDigitisedCopy-LandRecordsPrototype)",
+          "confidence": 84.99,
+          "bbox": [
+            424,
+            1462,
+            1307,
+            1505
+          ]
+        },
+        {
+          "word": "OOOOOOOOOOOO（DoCumentID）:SYNTH-DOC-OOO",
+          "confidence": 68.67,
+          "bbox": [
+            429,
+            1508,
+            999,
+            1533
+          ]
+        },
+        {
+          "word": "UPCADASTRE",
+          "confidence": 98.98,
+          "bbox": [
+            204,
+            1533,
+            329,
+            1563
+          ]
+        },
+        {
+          "word": "alR/ur(RevenueInspector/Lekhpal-SyntheticSignature)",
+          "confidence": 83.86,
+          "bbox": [
+            426,
+            1544,
+            1194,
+            1582
+          ]
+        },
+        {
+          "word": "qHufqRafar",
+          "confidence": 57.22,
+          "bbox": [
+            186,
+            1569,
+            351,
+            1606
+          ]
+        },
+        {
+          "word": "中h2上h电n中hEb1中",
+          "confidence": 50.24,
+          "bbox": [
+            424,
+            1583,
+            1206,
+            1620
+          ]
+        },
+        {
+          "word": "DEMOREGISTRYMATCH-NOTANOFFICIALGOVERNMENTVERIFICATION",
+          "confidence": 99.23,
+          "bbox": [
+            542,
+            2498,
+            1325,
+            2523
+          ]
+        }
+      ]
+    }
+  ],
+  "sample_02_clean.png": [
+    {
+      "page_number": 1,
+      "raw_text": "*** SYNIHE IC DE MO Ri CORD GdCI UAIaNU 3R 3JUI b 0 OR DE mO / 1ISI PURPOSES ONI Y *\"\n3dR qRGx RuHq Rfg (Board of Revenue, Uttar Pradesh)\nJQ&RU dilf (3EfR 3HfGRa) / RECORD OF RIGHTS (ROR)\nqRuR ailQTHd tisfal 2006 (f ormn ROR UP Revenue Code 2006)\nfl (District)\nVaranasi (Synthetic)\n·ll (Pargana)\nDehat (Synthetic)\nUtfl dN (i asli Year)\n14301435\ndfle (lehsil)\nSadar (Synthetic)\n/id (Village) Mohanpur\nilul (Khata No)\n00088\nlt (e)\nlefl/ dl-\nfgif/\n(1) Kata No\n() I andhoider &Pareny/Spoune\n3) Kuna No\n(4) Aoa (l细)\n(5) Rev (R)\n(6) Remarks / Ordems\n00088\n&fy ll&d (Dinesh Yadav) Hl1 1/1\n112/3\n0.8210\n34.00\nufd/uifiyd ulkd (Rameshwar Yadav)\n-fo tu Mohanpur\nSYNTHETIC DEMO RECORD\nNOT OFFICIAL GOVERNMENTIRECORD\nouyefiai kafefaf uffu uRce (Digitised CopyIand Records Prototype)\n(DocumenI II) SYN IH (OC 000\nUP CADASTR\nf  / e (Revenue Inspector / IekhpalSynthetc Sgnature)\nquufa qafafof",
+      "word_count": 38,
+      "avg_confidence": 84.69,
+      "words": [
+        {
+          "word": "*** SYNIHE IC DE MO Ri CORD GdCI UAIaNU 3R 3JUI b 0 OR DE mO / 1ISI PURPOSES ONI Y *\"",
+          "confidence": 73.04,
+          "bbox": [
+            279,
+            8,
+            1113,
+            35
+          ]
+        },
+        {
+          "word": "3dR qRGx RuHq Rfg (Board of Revenue, Uttar Pradesh)",
+          "confidence": 85.88,
+          "bbox": [
+            306,
+            60,
+            1095,
+            94
+          ]
+        },
+        {
+          "word": "JQ&RU dilf (3EfR 3HfGRa) / RECORD OF RIGHTS (ROR)",
+          "confidence": 81.22,
+          "bbox": [
+            382,
+            98,
+            1020,
+            129
+          ]
+        },
+        {
+          "word": "qRuR ailQTHd tisfal 2006 (f ormn ROR UP Revenue Code 2006)",
+          "confidence": 75.31,
+          "bbox": [
+            415,
+            132,
+            987,
+            161
+          ]
+        },
+        {
+          "word": "fl (District)",
+          "confidence": 90.47,
+          "bbox": [
+            55,
+            178,
+            178,
+            210
+          ]
+        },
+        {
+          "word": "Varanasi (Synthetic)",
+          "confidence": 98.1,
+          "bbox": [
+            219,
+            184,
+            389,
+            207
+          ]
+        },
+        {
+          "word": "·ll (Pargana)",
+          "confidence": 83.23,
+          "bbox": [
+            499,
+            181,
+            638,
+            209
+          ]
+        },
+        {
+          "word": "Dehat (Synthetic)",
+          "confidence": 99.24,
+          "bbox": [
+            679,
+            184,
+            825,
+            207
+          ]
+        },
+        {
+          "word": "Utfl dN (i asli Year)",
+          "confidence": 78.31,
+          "bbox": [
+            947,
+            178,
+            1138,
+            209
+          ]
+        },
+        {
+          "word": "14301435",
+          "confidence": 99.97,
+          "bbox": [
+            1180,
+            184,
+            1271,
+            205
+          ]
+        },
+        {
+          "word": "dfle (lehsil)",
+          "confidence": 84.04,
+          "bbox": [
+            58,
+            215,
+            184,
+            240
+          ]
+        },
+        {
+          "word": "Sadar (Synthetic)",
+          "confidence": 99.16,
+          "bbox": [
+            219,
+            219,
+            364,
+            240
+          ]
+        },
+        {
+          "word": "/id (Village) Mohanpur",
+          "confidence": 91.27,
+          "bbox": [
+            498,
+            212,
+            771,
+            244
+          ]
+        },
+        {
+          "word": "ilul (Khata No)",
+          "confidence": 77.37,
+          "bbox": [
+            948,
+            215,
+            1138,
+            242
+          ]
+        },
+        {
+          "word": "00088",
+          "confidence": 99.97,
+          "bbox": [
+            1178,
+            218,
+            1233,
+            240
+          ]
+        },
+        {
+          "word": "lt (e)",
+          "confidence": 54.34,
+          "bbox": [
+            712,
+            283,
+            818,
+            303
+          ]
+        },
+        {
+          "word": "lefl/ dl-",
+          "confidence": 57.58,
+          "bbox": [
+            1071,
+            281,
+            1190,
+            305
+          ]
+        },
+        {
+          "word": "fgif/",
+          "confidence": 64.35,
+          "bbox": [
+            1215,
+            281,
+            1336,
+            304
+          ]
+        },
+        {
+          "word": "(1) Kata No",
+          "confidence": 95.11,
+          "bbox": [
+            75,
+            311,
+            151,
+            328
+          ]
+        },
+        {
+          "word": "() I andhoider &Pareny/Spoune",
+          "confidence": 86.66,
+          "bbox": [
+            323,
+            311,
+            506,
+            328
+          ]
+        },
+        {
+          "word": "3) Kuna No",
+          "confidence": 84.58,
+          "bbox": [
+            723,
+            311,
+            805,
+            328
+          ]
+        },
+        {
+          "word": "(4) Aoa (l细)",
+          "confidence": 78.01,
+          "bbox": [
+            934,
+            311,
+            1011,
+            328
+          ]
+        },
+        {
+          "word": "(5) Rev (R)",
+          "confidence": 83.68,
+          "bbox": [
+            1098,
+            309,
+            1163,
+            330
+          ]
+        },
+        {
+          "word": "(6) Remarks / Ordems",
+          "confidence": 85.76,
+          "bbox": [
+            1211,
+            307,
+            1337,
+            329
+          ]
+        },
+        {
+          "word": "00088",
+          "confidence": 99.96,
+          "bbox": [
+            66,
+            362,
+            129,
+            387
+          ]
+        },
+        {
+          "word": "&fy ll&d (Dinesh Yadav) Hl1 1/1",
+          "confidence": 80.28,
+          "bbox": [
+            195,
+            358,
+            492,
+            391
+          ]
+        },
+        {
+          "word": "112/3",
+          "confidence": 99.75,
+          "bbox": [
+            667,
+            361,
+            726,
+            389
+          ]
+        },
+        {
+          "word": "0.8210",
+          "confidence": 91.19,
+          "bbox": [
+            897,
+            364,
+            959,
+            385
+          ]
+        },
+        {
+          "word": "34.00",
+          "confidence": 93.93,
+          "bbox": [
+            1073,
+            362,
+            1135,
+            386
+          ]
+        },
+        {
+          "word": "ufd/uifiyd ulkd (Rameshwar Yadav)",
+          "confidence": 82.42,
+          "bbox": [
+            202,
+            386,
+            562,
+            418
+          ]
+        },
+        {
+          "word": "-fo tu Mohanpur",
+          "confidence": 75.35,
+          "bbox": [
+            202,
+            411,
+            342,
+            442
+          ]
+        },
+        {
+          "word": "SYNTHETIC DEMO RECORD",
+          "confidence": 95.99,
+          "bbox": [
+            286,
+            842,
+            1251,
+            899
+          ]
+        },
+        {
+          "word": "NOT OFFICIAL GOVERNMENTIRECORD",
+          "confidence": 94.31,
+          "bbox": [
+            319,
+            923,
+            1047,
+            959
+          ]
+        },
+        {
+          "word": "ouyefiai kafefaf uffu uRce (Digitised CopyIand Records Prototype)",
+          "confidence": 79.96,
+          "bbox": [
+            320,
+            1099,
+            980,
+            1127
+          ]
+        },
+        {
+          "word": "(DocumenI II) SYN IH (OC 000",
+          "confidence": 89.36,
+          "bbox": [
+            507,
+            1130,
+            751,
+            1150
+          ]
+        },
+        {
+          "word": "UP CADASTR",
+          "confidence": 90.87,
+          "bbox": [
+            154,
+            1151,
+            246,
+            1171
+          ]
+        },
+        {
+          "word": "f  / e (Revenue Inspector / IekhpalSynthetc Sgnature)",
+          "confidence": 79.14,
+          "bbox": [
+            321,
+            1159,
+            896,
+            1184
+          ]
+        },
+        {
+          "word": "quufa qafafof",
+          "confidence": 59.08,
+          "bbox": [
+            140,
+            1179,
+            262,
+            1203
+          ]
+        }
+      ]
+    }
+  ],
+  "sample_03_rotated_cw.pdf": [
+    {
+      "page_number": 1,
+      "raw_text": "SYNTHETCDEMORECORDFORDEMO/TEST\n3dRR(BoardofRevenue,UttarPradesh)\nR()/RECORDOFRIGHTS(ROR)\n2006(FormROR-UPRevenueCode2006)\n(FasliYear):\n1430-1435\nI(Pargana):\nHaveli(Synthetic)\nTl(District):\nAyodhya (Synthetic)\n(KhatNo):\n00315\nRTH/T(Village):RampurKalan\n(Tehsil):\nSohawal(Synthetic)\n/\n///\n(4) Area (Ha)\n(5)Rev(e)\n(6)Remarks/Orders\n(3) Khasra No.\n(1) Khata No.\n(2)Landholder&Parent/Spouse\n12.00\n78/2,79\n0.2500\n3aIt(AnitaDevi)HI1/1\n00315\na/qaf:fqRal(VijayPratap)\n田RampurKalan\nSYNTHETIC DEMO RECORD\nNOT OFFICIAL GQVERNMENT RECORD\n币qeaf-y-RcDigitisedCopy-LandRecordsPrototype)\n□□OOOOOOOOOOOO(DoCUmentID）:SYNTH-DOC-000\nUPCADASTRE\n/（RevenueInspector/ekhpal-SyntheticSignature)\nRFGISTRYMATCH-NOTANOFFICIALGOVERNMENTVERIFICATION",
+      "word_count": 37,
+      "avg_confidence": 88.22,
+      "words": [
+        {
+          "word": "SYNTHETCDEMORECORDFORDEMO/TEST",
+          "confidence": 81.42,
+          "bbox": [
+            333,
+            1,
+            1217,
+            65
+          ]
+        },
+        {
+          "word": "3dRR(BoardofRevenue,UttarPradesh)",
+          "confidence": 88.77,
+          "bbox": [
+            371,
+            63,
+            1425,
+            143
+          ]
+        },
+        {
+          "word": "R()/RECORDOFRIGHTS(ROR)",
+          "confidence": 84.5,
+          "bbox": [
+            469,
+            116,
+            1329,
+            186
+          ]
+        },
+        {
+          "word": "2006(FormROR-UPRevenueCode2006)",
+          "confidence": 82.67,
+          "bbox": [
+            517,
+            160,
+            1284,
+            227
+          ]
+        },
+        {
+          "word": "(FasliYear):",
+          "confidence": 90.07,
+          "bbox": [
+            1234,
+            226,
+            1491,
+            263
+          ]
+        },
+        {
+          "word": "1430-1435",
+          "confidence": 99.68,
+          "bbox": [
+            1537,
+            218,
+            1665,
+            257
+          ]
+        },
+        {
+          "word": "I(Pargana):",
+          "confidence": 85.43,
+          "bbox": [
+            635,
+            247,
+            829,
+            282
+          ]
+        },
+        {
+          "word": "Haveli(Synthetic)",
+          "confidence": 96.09,
+          "bbox": [
+            870,
+            237,
+            1071,
+            278
+          ]
+        },
+        {
+          "word": "Tl(District):",
+          "confidence": 83.99,
+          "bbox": [
+            48,
+            264,
+            213,
+            302
+          ]
+        },
+        {
+          "word": "Ayodhya (Synthetic)",
+          "confidence": 97.05,
+          "bbox": [
+            258,
+            255,
+            489,
+            298
+          ]
+        },
+        {
+          "word": "(KhatNo):",
+          "confidence": 72.19,
+          "bbox": [
+            1235,
+            270,
+            1494,
+            310
+          ]
+        },
+        {
+          "word": "00315",
+          "confidence": 99.82,
+          "bbox": [
+            1538,
+            269,
+            1614,
+            301
+          ]
+        },
+        {
+          "word": "RTH/T(Village):RampurKalan",
+          "confidence": 85.29,
+          "bbox": [
+            634,
+            282,
+            1041,
+            333
+          ]
+        },
+        {
+          "word": "(Tehsil):",
+          "confidence": 80.34,
+          "bbox": [
+            48,
+            307,
+            229,
+            346
+          ]
+        },
+        {
+          "word": "Sohawal(Synthetic)",
+          "confidence": 98.5,
+          "bbox": [
+            260,
+            302,
+            487,
+            341
+          ]
+        },
+        {
+          "word": "/",
+          "confidence": 77.51,
+          "bbox": [
+            1398,
+            353,
+            1560,
+            390
+          ]
+        },
+        {
+          "word": "///",
+          "confidence": 59.33,
+          "bbox": [
+            339,
+            378,
+            714,
+            422
+          ]
+        },
+        {
+          "word": "(4) Area (Ha)",
+          "confidence": 89.83,
+          "bbox": [
+            1215,
+            398,
+            1322,
+            431
+          ]
+        },
+        {
+          "word": "(5)Rev(e)",
+          "confidence": 80.76,
+          "bbox": [
+            1435,
+            392,
+            1527,
+            426
+          ]
+        },
+        {
+          "word": "(6)Remarks/Orders",
+          "confidence": 92.01,
+          "bbox": [
+            1587,
+            384,
+            1759,
+            420
+          ]
+        },
+        {
+          "word": "(3) Khasra No.",
+          "confidence": 95.16,
+          "bbox": [
+            934,
+            406,
+            1051,
+            440
+          ]
+        },
+        {
+          "word": "(1) Khata No.",
+          "confidence": 91.37,
+          "bbox": [
+            72,
+            432,
+            180,
+            466
+          ]
+        },
+        {
+          "word": "(2)Landholder&Parent/Spouse",
+          "confidence": 94.82,
+          "bbox": [
+            402,
+            417,
+            654,
+            455
+          ]
+        },
+        {
+          "word": "12.00",
+          "confidence": 99.66,
+          "bbox": [
+            1402,
+            463,
+            1489,
+            501
+          ]
+        },
+        {
+          "word": "78/2,79",
+          "confidence": 98.08,
+          "bbox": [
+            865,
+            481,
+            970,
+            519
+          ]
+        },
+        {
+          "word": "0.2500",
+          "confidence": 99.88,
+          "bbox": [
+            1173,
+            475,
+            1254,
+            507
+          ]
+        },
+        {
+          "word": "3aIt(AnitaDevi)HI1/1",
+          "confidence": 79.28,
+          "bbox": [
+            237,
+            493,
+            588,
+            535
+          ]
+        },
+        {
+          "word": "00315",
+          "confidence": 99.91,
+          "bbox": [
+            65,
+            507,
+            148,
+            541
+          ]
+        },
+        {
+          "word": "a/qaf:fqRal(VijayPratap)",
+          "confidence": 72.28,
+          "bbox": [
+            248,
+            530,
+            640,
+            570
+          ]
+        },
+        {
+          "word": "田RampurKalan",
+          "confidence": 90.41,
+          "bbox": [
+            248,
+            567,
+            473,
+            605
+          ]
+        },
+        {
+          "word": "SYNTHETIC DEMO RECORD",
+          "confidence": 94.13,
+          "bbox": [
+            374,
+            1100,
+            1666,
+            1215
+          ]
+        },
+        {
+          "word": "NOT OFFICIAL GQVERNMENT RECORD",
+          "confidence": 92.67,
+          "bbox": [
+            423,
+            1214,
+            1392,
+            1296
+          ]
+        },
+        {
+          "word": "币qeaf-y-RcDigitisedCopy-LandRecordsPrototype)",
+          "confidence": 80.29,
+          "bbox": [
+            431,
+            1453,
+            1314,
+            1519
+          ]
+        },
+        {
+          "word": "□□OOOOOOOOOOOO(DoCUmentID）:SYNTH-DOC-000",
+          "confidence": 67.36,
+          "bbox": [
+            435,
+            1503,
+            1009,
+            1550
+          ]
+        },
+        {
+          "word": "UPCADASTRE",
+          "confidence": 98.85,
+          "bbox": [
+            211,
+            1550,
+            338,
+            1586
+          ]
+        },
+        {
+          "word": "/（RevenueInspector/ekhpal-SyntheticSignature)",
+          "confidence": 86.65,
+          "bbox": [
+            433,
+            1539,
+            1203,
+            1592
+          ]
+        },
+        {
+          "word": "RFGISTRYMATCH-NOTANOFFICIALGOVERNMENTVERIFICATION",
+          "confidence": 98.17,
+          "bbox": [
+            643,
+            2482,
+            1363,
+            2531
+          ]
+        }
+      ]
+    }
+  ],
+  "sample_04_rotated_ccw.jpg": [
+    {
+      "page_number": 1,
+      "raw_text": "CORDBUURRUBCORDEMO/TESTPURPOSESONLY\n3dR(BoardofRevenue,UttarPradesh)\nBRURHR)/RECORDOFRIGHTS(ROR)\nqa2006（FomORUPRevenueCode2006)\nofTl(District):\nBarabanki (Synthetic)\nl(Pargana):\nKursi (Synthetic)\nRN(FasliYear):\n1430-1435\nT(Tehsil):\nFatehpur (Synthetic)\nR/nfa (Village)Baragaon\n(KhataNo):\n00142\np/l1b/Pn/l2PR\nRRdo onen)\nsfgaaf/\n(1）Khata No\n(2)Lanchoider&ParenwSpouse\n(3) Khasra No\n(4） Area (ta)\n(5）Rev()\n(6） Remarks /Orders\n00142\n3RMohammadAi1/1\n54/1,54/2\n0.6120\n26.50\nyafUne\naaf(brahimKhan)\nfBaragaon\nSYNTHETIC DEMO RECORD\nNOTOFFICIALGOVERNMENT RECORD\nqeRlaafafafnfRauRe(Digitised Copy -Land Records Prototype)\n口OOOOODODOOOO0(DocumenIID)SYNTH-DOC000\nUPCADASTRE\nalR/re（Reveue Inspector/Lekhpal-SythetcSignature)\nRanfqafaof\nDEMOREGISTRYMATCH.NOTANOFFICIALGOVERNME",
+      "word_count": 40,
+      "avg_confidence": 83.46,
+      "words": [
+        {
+          "word": "CORDBUURRUBCORDEMO/TESTPURPOSESONLY",
+          "confidence": 82.79,
+          "bbox": [
+            468,
+            7,
+            1118,
+            36
+          ]
+        },
+        {
+          "word": "3dR(BoardofRevenue,UttarPradesh)",
+          "confidence": 86.31,
+          "bbox": [
+            306,
+            61,
+            1095,
+            95
+          ]
+        },
+        {
+          "word": "BRURHR)/RECORDOFRIGHTS(ROR)",
+          "confidence": 84.84,
+          "bbox": [
+            382,
+            97,
+            1020,
+            130
+          ]
+        },
+        {
+          "word": "qa2006（FomORUPRevenueCode2006)",
+          "confidence": 81.61,
+          "bbox": [
+            416,
+            132,
+            987,
+            161
+          ]
+        },
+        {
+          "word": "ofTl(District):",
+          "confidence": 77.98,
+          "bbox": [
+            56,
+            178,
+            181,
+            209
+          ]
+        },
+        {
+          "word": "Barabanki (Synthetic)",
+          "confidence": 98.84,
+          "bbox": [
+            218,
+            181,
+            400,
+            207
+          ]
+        },
+        {
+          "word": "l(Pargana):",
+          "confidence": 89.53,
+          "bbox": [
+            498,
+            180,
+            642,
+            209
+          ]
+        },
+        {
+          "word": "Kursi (Synthetic)",
+          "confidence": 98.1,
+          "bbox": [
+            679,
+            183,
+            816,
+            207
+          ]
+        },
+        {
+          "word": "RN(FasliYear):",
+          "confidence": 88.35,
+          "bbox": [
+            947,
+            178,
+            1140,
+            209
+          ]
+        },
+        {
+          "word": "1430-1435",
+          "confidence": 99.16,
+          "bbox": [
+            1178,
+            182,
+            1272,
+            206
+          ]
+        },
+        {
+          "word": "T(Tehsil):",
+          "confidence": 74.62,
+          "bbox": [
+            57,
+            212,
+            189,
+            243
+          ]
+        },
+        {
+          "word": "Fatehpur (Synthetic)",
+          "confidence": 98.1,
+          "bbox": [
+            216,
+            216,
+            392,
+            243
+          ]
+        },
+        {
+          "word": "R/nfa (Village)Baragaon",
+          "confidence": 82.21,
+          "bbox": [
+            498,
+            211,
+            766,
+            247
+          ]
+        },
+        {
+          "word": "(KhataNo):",
+          "confidence": 64.87,
+          "bbox": [
+            948,
+            215,
+            1142,
+            242
+          ]
+        },
+        {
+          "word": "00142",
+          "confidence": 99.77,
+          "bbox": [
+            1176,
+            216,
+            1234,
+            242
+          ]
+        },
+        {
+          "word": "p/l1b/Pn/l2PR",
+          "confidence": 57.43,
+          "bbox": [
+            275,
+            280,
+            555,
+            303
+          ]
+        },
+        {
+          "word": "RRdo onen)",
+          "confidence": 57.35,
+          "bbox": [
+            711,
+            281,
+            818,
+            305
+          ]
+        },
+        {
+          "word": "sfgaaf/",
+          "confidence": 63.21,
+          "bbox": [
+            1214,
+            280,
+            1338,
+            304
+          ]
+        },
+        {
+          "word": "(1）Khata No",
+          "confidence": 87.48,
+          "bbox": [
+            74,
+            309,
+            153,
+            329
+          ]
+        },
+        {
+          "word": "(2)Lanchoider&ParenwSpouse",
+          "confidence": 89.6,
+          "bbox": [
+            322,
+            309,
+            507,
+            329
+          ]
+        },
+        {
+          "word": "(3) Khasra No",
+          "confidence": 83.46,
+          "bbox": [
+            722,
+            309,
+            807,
+            330
+          ]
+        },
+        {
+          "word": "(4） Area (ta)",
+          "confidence": 70.51,
+          "bbox": [
+            931,
+            309,
+            1012,
+            330
+          ]
+        },
+        {
+          "word": "(5）Rev()",
+          "confidence": 78.02,
+          "bbox": [
+            1097,
+            309,
+            1164,
+            330
+          ]
+        },
+        {
+          "word": "(6） Remarks /Orders",
+          "confidence": 83.89,
+          "bbox": [
+            1211,
+            308,
+            1338,
+            331
+          ]
+        },
+        {
+          "word": "00142",
+          "confidence": 99.85,
+          "bbox": [
+            65,
+            360,
+            129,
+            389
+          ]
+        },
+        {
+          "word": "3RMohammadAi1/1",
+          "confidence": 74.11,
+          "bbox": [
+            194,
+            357,
+            556,
+            390
+          ]
+        },
+        {
+          "word": "54/1,54/2",
+          "confidence": 98.17,
+          "bbox": [
+            668,
+            361,
+            765,
+            388
+          ]
+        },
+        {
+          "word": "0.6120",
+          "confidence": 99.18,
+          "bbox": [
+            896,
+            362,
+            959,
+            386
+          ]
+        },
+        {
+          "word": "26.50",
+          "confidence": 99.39,
+          "bbox": [
+            1072,
+            362,
+            1134,
+            387
+          ]
+        },
+        {
+          "word": "yafUne",
+          "confidence": 64.89,
+          "bbox": [
+            1209,
+            355,
+            1340,
+            385
+          ]
+        },
+        {
+          "word": "aaf(brahimKhan)",
+          "confidence": 78.95,
+          "bbox": [
+            202,
+            386,
+            519,
+            418
+          ]
+        },
+        {
+          "word": "fBaragaon",
+          "confidence": 87.08,
+          "bbox": [
+            200,
+            410,
+            338,
+            443
+          ]
+        },
+        {
+          "word": "SYNTHETIC DEMO RECORD",
+          "confidence": 95.03,
+          "bbox": [
+            284,
+            842,
+            1251,
+            899
+          ]
+        },
+        {
+          "word": "NOTOFFICIALGOVERNMENT RECORD",
+          "confidence": 94.75,
+          "bbox": [
+            319,
+            923,
+            1047,
+            959
+          ]
+        },
+        {
+          "word": "qeRlaafafafnfRauRe(Digitised Copy -Land Records Prototype)",
+          "confidence": 80.48,
+          "bbox": [
+            319,
+            1097,
+            981,
+            1129
+          ]
+        },
+        {
+          "word": "口OOOOODODOOOO0(DocumenIID)SYNTH-DOC000",
+          "confidence": 66.67,
+          "bbox": [
+            321,
+            1129,
+            749,
+            1149
+          ]
+        },
+        {
+          "word": "UPCADASTRE",
+          "confidence": 97.89,
+          "bbox": [
+            154,
+            1151,
+            247,
+            1172
+          ]
+        },
+        {
+          "word": "alR/re（Reveue Inspector/Lekhpal-SythetcSignature)",
+          "confidence": 78.11,
+          "bbox": [
+            320,
+            1158,
+            895,
+            1184
+          ]
+        },
+        {
+          "word": "Ranfqafaof",
+          "confidence": 50.92,
+          "bbox": [
+            138,
+            1175,
+            263,
+            1205
+          ]
+        },
+        {
+          "word": "DEMOREGISTRYMATCH.NOTANOFFICIALGOVERNME",
+          "confidence": 94.89,
+          "bbox": [
+            406,
+            1871,
+            857,
+            1892
+          ]
+        }
+      ]
+    }
+  ],
+  "sample_05_low_contrast.pdf": [
+    {
+      "page_number": 1,
+      "raw_text": "SYNTHEICDEMORECORD中NU3R3UFORDEMO/TESTPURPOSESONLY\n3RRTuHR(BoardofRevenue,UttarPradesh)\nR(RHR/RECORDOFRIGHTS(ROR)\nd-faT2006（FomROR-UPReveneCode2006）\nfTlDistrict:\nKanpur Nagar (Synthetic)\nRl(Pargana):\nAkbarpur(Synthetic)\ni qR(Fasli Year):\n1430-1435\nee(Tehsil):\nGhatampur (Synthetic)\n/(Village）:Govindpur\n00204\n(2）\nEl/h\n/\n(1yKhata To\n(2)Landhclder &ParentSfcuse\n13Khosrelc\n（4Bre(Ha)\nREV（）\n(8）RemarksOrders\n00204\naRHI(HarishankarVerma)1/1\n9971\n1.1500\n45.00\nufaIdfleHgGRHI(BalmukundVerma)\nuyeadRafaff-rfaauRc (Digitised Copy-Land Records Prototype)\nDoCumenID):SYITH-DOC-000\nDEMOREGISTRYMATCH-NOTANOFFICIALGOVERNMENTVERIFICATION",
+      "word_count": 32,
+      "avg_confidence": 82.36,
+      "words": [
+        {
+          "word": "SYNTHEICDEMORECORD中NU3R3UFORDEMO/TESTPURPOSESONLY",
+          "confidence": 85.52,
+          "bbox": [
+            400,
+            12,
+            1475,
+            45
+          ]
+        },
+        {
+          "word": "3RRTuHR(BoardofRevenue,UttarPradesh)",
+          "confidence": 81.46,
+          "bbox": [
+            405,
+            80,
+            1462,
+            127
+          ]
+        },
+        {
+          "word": "R(RHR/RECORDOFRIGHTS(ROR)",
+          "confidence": 87.63,
+          "bbox": [
+            504,
+            130,
+            1359,
+            173
+          ]
+        },
+        {
+          "word": "d-faT2006（FomROR-UPReveneCode2006）",
+          "confidence": 80.45,
+          "bbox": [
+            551,
+            177,
+            1314,
+            212
+          ]
+        },
+        {
+          "word": "fTlDistrict:",
+          "confidence": 82.68,
+          "bbox": [
+            76,
+            237,
+            246,
+            280
+          ]
+        },
+        {
+          "word": "Kanpur Nagar (Synthetic)",
+          "confidence": 95.43,
+          "bbox": [
+            291,
+            242,
+            579,
+            277
+          ]
+        },
+        {
+          "word": "Rl(Pargana):",
+          "confidence": 83.68,
+          "bbox": [
+            662,
+            241,
+            859,
+            279
+          ]
+        },
+        {
+          "word": "Akbarpur(Synthetic)",
+          "confidence": 97.59,
+          "bbox": [
+            904,
+            243,
+            1138,
+            277
+          ]
+        },
+        {
+          "word": "i qR(Fasli Year):",
+          "confidence": 77.03,
+          "bbox": [
+            1265,
+            238,
+            1524,
+            278
+          ]
+        },
+        {
+          "word": "1430-1435",
+          "confidence": 99.63,
+          "bbox": [
+            1572,
+            243,
+            1695,
+            274
+          ]
+        },
+        {
+          "word": "ee(Tehsil):",
+          "confidence": 72.54,
+          "bbox": [
+            73,
+            282,
+            261,
+            323
+          ]
+        },
+        {
+          "word": "Ghatampur (Synthetic)",
+          "confidence": 96.78,
+          "bbox": [
+            287,
+            289,
+            549,
+            323
+          ]
+        },
+        {
+          "word": "/(Village）:Govindpur",
+          "confidence": 84.25,
+          "bbox": [
+            662,
+            286,
+            1028,
+            323
+          ]
+        },
+        {
+          "word": "00204",
+          "confidence": 99.68,
+          "bbox": [
+            1566,
+            288,
+            1647,
+            320
+          ]
+        },
+        {
+          "word": "(2）",
+          "confidence": 64.08,
+          "bbox": [
+            946,
+            370,
+            1092,
+            407
+          ]
+        },
+        {
+          "word": "El/h",
+          "confidence": 51.51,
+          "bbox": [
+            1426,
+            372,
+            1586,
+            407
+          ]
+        },
+        {
+          "word": "/",
+          "confidence": 66.22,
+          "bbox": [
+            1615,
+            369,
+            1784,
+            407
+          ]
+        },
+        {
+          "word": "(1yKhata To",
+          "confidence": 63.9,
+          "bbox": [
+            100,
+            412,
+            197,
+            438
+          ]
+        },
+        {
+          "word": "(2)Landhclder &ParentSfcuse",
+          "confidence": 83.93,
+          "bbox": [
+            428,
+            412,
+            670,
+            438
+          ]
+        },
+        {
+          "word": "13Khosrelc",
+          "confidence": 67.37,
+          "bbox": [
+            962,
+            412,
+            1073,
+            439
+          ]
+        },
+        {
+          "word": "（4Bre(Ha)",
+          "confidence": 62.71,
+          "bbox": [
+            1237,
+            408,
+            1348,
+            443
+          ]
+        },
+        {
+          "word": "REV（）",
+          "confidence": 58.09,
+          "bbox": [
+            1463,
+            412,
+            1549,
+            439
+          ]
+        },
+        {
+          "word": "(8）RemarksOrders",
+          "confidence": 88.08,
+          "bbox": [
+            1615,
+            411,
+            1784,
+            440
+          ]
+        },
+        {
+          "word": "00204",
+          "confidence": 99.86,
+          "bbox": [
+            87,
+            485,
+            169,
+            515
+          ]
+        },
+        {
+          "word": "aRHI(HarishankarVerma)1/1",
+          "confidence": 86.44,
+          "bbox": [
+            256,
+            478,
+            753,
+            519
+          ]
+        },
+        {
+          "word": "9971",
+          "confidence": 93.62,
+          "bbox": [
+            887,
+            481,
+            955,
+            518
+          ]
+        },
+        {
+          "word": "1.1500",
+          "confidence": 99.6,
+          "bbox": [
+            1197,
+            485,
+            1278,
+            515
+          ]
+        },
+        {
+          "word": "45.00",
+          "confidence": 99.43,
+          "bbox": [
+            1429,
+            484,
+            1510,
+            515
+          ]
+        },
+        {
+          "word": "ufaIdfleHgGRHI(BalmukundVerma)",
+          "confidence": 72.12,
+          "bbox": [
+            271,
+            519,
+            758,
+            554
+          ]
+        },
+        {
+          "word": "uyeadRafaff-rfaauRc (Digitised Copy-Land Records Prototype)",
+          "confidence": 77.88,
+          "bbox": [
+            424,
+            1463,
+            1305,
+            1504
+          ]
+        },
+        {
+          "word": "DoCumenID):SYITH-DOC-000",
+          "confidence": 78.53,
+          "bbox": [
+            681,
+            1508,
+            998,
+            1533
+          ]
+        },
+        {
+          "word": "DEMOREGISTRYMATCH-NOTANOFFICIALGOVERNMENTVERIFICATION",
+          "confidence": 97.92,
+          "bbox": [
+            540,
+            2494,
+            1325,
+            2525
+          ]
+        }
+      ]
+    }
+  ],
+  "sample_06_low_contrast.png": [
+    {
+      "page_number": 1,
+      "raw_text": "SYNTHETICDEMORECORD-dCUU3R3UBFORDEMO/TESTPURPOSESONLY\nBdRqRqIRTuHaqRg(Board ofRevenue,UttarPradesh)\n3QRU(3UR3HR)/RECORDOFRIGHTS(ROR)\nRuR-TNd2006FomROR\nufell (District):\nPrayagraj (Synthetic)\nRl(Pargana):\nJhusi (Synthetic)\nf Ru (Fasli Yean)\n1430-1435\nTffe (Tehsil:\nPhulpur (Synthetic)\nRH /mfa (Village): Kalyanpur\niiiaqi (KhataNo):\n//\nRR/\n00073\n-a f (SunitaSingh)  1/1\n16/4\n0.3340\n15.20\nqfaqatafe(Rajendra Singh)\npuyeioaqafifaf-y-3ruferauiReei Digitised Copy-Land RecordsPrototype\nDEMOREGISTRYMATCH-NOTANOFFICIALGOVERNMENTVERIFICATION",
+      "word_count": 24,
+      "avg_confidence": 87.69,
+      "words": [
+        {
+          "word": "SYNTHETICDEMORECORD-dCUU3R3UBFORDEMO/TESTPURPOSESONLY",
+          "confidence": 88.06,
+          "bbox": [
+            302,
+            9,
+            1104,
+            35
+          ]
+        },
+        {
+          "word": "BdRqRqIRTuHaqRg(Board ofRevenue,UttarPradesh)",
+          "confidence": 82.27,
+          "bbox": [
+            305,
+            61,
+            1096,
+            96
+          ]
+        },
+        {
+          "word": "3QRU(3UR3HR)/RECORDOFRIGHTS(ROR)",
+          "confidence": 88.53,
+          "bbox": [
+            381,
+            99,
+            1020,
+            130
+          ]
+        },
+        {
+          "word": "RuR-TNd2006FomROR",
+          "confidence": 71.32,
+          "bbox": [
+            417,
+            135,
+            784,
+            158
+          ]
+        },
+        {
+          "word": "ufell (District):",
+          "confidence": 81.43,
+          "bbox": [
+            59,
+            178,
+            180,
+            210
+          ]
+        },
+        {
+          "word": "Prayagraj (Synthetic)",
+          "confidence": 98.8,
+          "bbox": [
+            217,
+            181,
+            396,
+            210
+          ]
+        },
+        {
+          "word": "Rl(Pargana):",
+          "confidence": 94.67,
+          "bbox": [
+            498,
+            179,
+            642,
+            210
+          ]
+        },
+        {
+          "word": "Jhusi (Synthetic)",
+          "confidence": 99.28,
+          "bbox": [
+            676,
+            181,
+            818,
+            210
+          ]
+        },
+        {
+          "word": "f Ru (Fasli Yean)",
+          "confidence": 87.4,
+          "bbox": [
+            947,
+            178,
+            1139,
+            209
+          ]
+        },
+        {
+          "word": "1430-1435",
+          "confidence": 99.82,
+          "bbox": [
+            1179,
+            182,
+            1272,
+            206
+          ]
+        },
+        {
+          "word": "Tffe (Tehsil:",
+          "confidence": 79.68,
+          "bbox": [
+            58,
+            214,
+            190,
+            242
+          ]
+        },
+        {
+          "word": "Phulpur (Synthetic)",
+          "confidence": 99.81,
+          "bbox": [
+            217,
+            214,
+            384,
+            245
+          ]
+        },
+        {
+          "word": "RH /mfa (Village): Kalyanpur",
+          "confidence": 87.19,
+          "bbox": [
+            497,
+            213,
+            769,
+            243
+          ]
+        },
+        {
+          "word": "iiiaqi (KhataNo):",
+          "confidence": 66.38,
+          "bbox": [
+            949,
+            216,
+            1139,
+            240
+          ]
+        },
+        {
+          "word": "//",
+          "confidence": 70.5,
+          "bbox": [
+            276,
+            282,
+            554,
+            302
+          ]
+        },
+        {
+          "word": "RR/",
+          "confidence": 72.48,
+          "bbox": [
+            1070,
+            279,
+            1189,
+            306
+          ]
+        },
+        {
+          "word": "00073",
+          "confidence": 99.94,
+          "bbox": [
+            68,
+            362,
+            128,
+            387
+          ]
+        },
+        {
+          "word": "-a f (SunitaSingh)  1/1",
+          "confidence": 81.7,
+          "bbox": [
+            195,
+            360,
+            479,
+            387
+          ]
+        },
+        {
+          "word": "16/4",
+          "confidence": 99.49,
+          "bbox": [
+            668,
+            362,
+            715,
+            388
+          ]
+        },
+        {
+          "word": "0.3340",
+          "confidence": 99.38,
+          "bbox": [
+            896,
+            362,
+            959,
+            387
+          ]
+        },
+        {
+          "word": "15.20",
+          "confidence": 99.51,
+          "bbox": [
+            1071,
+            360,
+            1134,
+            388
+          ]
+        },
+        {
+          "word": "qfaqatafe(Rajendra Singh)",
+          "confidence": 78.27,
+          "bbox": [
+            203,
+            386,
+            511,
+            416
+          ]
+        },
+        {
+          "word": "puyeioaqafifaf-y-3ruferauiReei Digitised Copy-Land RecordsPrototype",
+          "confidence": 80.86,
+          "bbox": [
+            321,
+            1099,
+            967,
+            1127
+          ]
+        },
+        {
+          "word": "DEMOREGISTRYMATCH-NOTANOFFICIALGOVERNMENTVERIFICATION",
+          "confidence": 97.73,
+          "bbox": [
+            408,
+            1872,
+            993,
+            1892
+          ]
+        }
+      ]
+    }
+  ],
+  "sample_07_missing_field.pdf": [
+    {
+      "page_number": 1,
+      "raw_text": "SYNTHETICDEMORECORD3RFORDEMO/TESTPURPOSESONLY\nBdRRGHR(Board of Revenue,UttarPradesh)\nRU(RHR)/RECORDOFRIGHTS(ROR)\n-THI2006（FormROR-UPRevenueCode2006)\nTl(District):\nLucknow(Synthetic)\nRI (Pargana):\nNigohan(Synthetic)\nlaRN(FasliYear):\n1430-1435\n(Tehsil):\nMohanlalganj (Synthetic)\nR/Ta(Village):Mohanlalganj\nIKhataNo）:\n00412\n(\n/\n(1)Khata No.\n(2)Landholder&Parent/Spouse\n(3)Khasra No.\n(4) Area (Ha)\n(5)Rev(R)\n(6)Remarks/Orders\n00412\nHR(Rampal Maurya)1/1\n210/2\n0.5400\n22.00\n(Mi\naT/af:Rd/OMITTED]\nMohanlalganj\nSYNTHETIC DEMO RECORD\nNOTOFFICIALGQVERNMENT RECORD\neRaRcDigitisedCopy-LandRecordsPrototype)\nOOOOOOOOOO（DoCUmentID）:SYNTH-DOC-000\nUPCADASTRE\nalR/ur(RevenueInspector/Lekhpal-SyntheticSignature)\nqHufqRafar\n中h2上h电n中hEb1中\nDEMOREGISTRYMATCH-NOTANOFFICIALGOVERNMENTVERIFICATION",
+      "word_count": 40,
+      "avg_confidence": 86.93,
+      "words": [
+        {
+          "word": "SYNTHETICDEMORECORD3RFORDEMO/TESTPURPOSESONLY",
+          "confidence": 90.62,
+          "bbox": [
+            381,
+            10,
+            1485,
+            47
+          ]
+        },
+        {
+          "word": "BdRRGHR(Board of Revenue,UttarPradesh)",
+          "confidence": 88.23,
+          "bbox": [
+            404,
+            77,
+            1463,
+            128
+          ]
+        },
+        {
+          "word": "RU(RHR)/RECORDOFRIGHTS(ROR)",
+          "confidence": 84.02,
+          "bbox": [
+            504,
+            128,
+            1359,
+            173
+          ]
+        },
+        {
+          "word": "-THI2006（FormROR-UPRevenueCode2006)",
+          "confidence": 82.13,
+          "bbox": [
+            552,
+            174,
+            1314,
+            213
+          ]
+        },
+        {
+          "word": "Tl(District):",
+          "confidence": 86.92,
+          "bbox": [
+            74,
+            236,
+            243,
+            279
+          ]
+        },
+        {
+          "word": "Lucknow(Synthetic)",
+          "confidence": 96.24,
+          "bbox": [
+            289,
+            241,
+            520,
+            278
+          ]
+        },
+        {
+          "word": "RI (Pargana):",
+          "confidence": 84.86,
+          "bbox": [
+            664,
+            243,
+            858,
+            277
+          ]
+        },
+        {
+          "word": "Nigohan(Synthetic)",
+          "confidence": 98.18,
+          "bbox": [
+            904,
+            243,
+            1131,
+            277
+          ]
+        },
+        {
+          "word": "laRN(FasliYear):",
+          "confidence": 82.58,
+          "bbox": [
+            1264,
+            237,
+            1525,
+            277
+          ]
+        },
+        {
+          "word": "1430-1435",
+          "confidence": 99.78,
+          "bbox": [
+            1571,
+            245,
+            1694,
+            275
+          ]
+        },
+        {
+          "word": "(Tehsil):",
+          "confidence": 82.56,
+          "bbox": [
+            76,
+            284,
+            256,
+            323
+          ]
+        },
+        {
+          "word": "Mohanlalganj (Synthetic)",
+          "confidence": 95.47,
+          "bbox": [
+            289,
+            287,
+            575,
+            324
+          ]
+        },
+        {
+          "word": "R/Ta(Village):Mohanlalganj",
+          "confidence": 86.08,
+          "bbox": [
+            663,
+            282,
+            1066,
+            324
+          ]
+        },
+        {
+          "word": "IKhataNo）:",
+          "confidence": 67.75,
+          "bbox": [
+            1265,
+            286,
+            1524,
+            321
+          ]
+        },
+        {
+          "word": "00412",
+          "confidence": 99.83,
+          "bbox": [
+            1568,
+            288,
+            1646,
+            324
+          ]
+        },
+        {
+          "word": "(",
+          "confidence": 55.54,
+          "bbox": [
+            948,
+            375,
+            1090,
+            406
+          ]
+        },
+        {
+          "word": "/",
+          "confidence": 74.44,
+          "bbox": [
+            1426,
+            370,
+            1589,
+            408
+          ]
+        },
+        {
+          "word": "(1)Khata No.",
+          "confidence": 94.78,
+          "bbox": [
+            97,
+            409,
+            202,
+            439
+          ]
+        },
+        {
+          "word": "(2)Landholder&Parent/Spouse",
+          "confidence": 97.95,
+          "bbox": [
+            429,
+            412,
+            677,
+            438
+          ]
+        },
+        {
+          "word": "(3)Khasra No.",
+          "confidence": 90.5,
+          "bbox": [
+            962,
+            412,
+            1078,
+            439
+          ]
+        },
+        {
+          "word": "(4) Area (Ha)",
+          "confidence": 87.22,
+          "bbox": [
+            1240,
+            411,
+            1348,
+            441
+          ]
+        },
+        {
+          "word": "(5)Rev(R)",
+          "confidence": 84.62,
+          "bbox": [
+            1462,
+            411,
+            1553,
+            441
+          ]
+        },
+        {
+          "word": "(6)Remarks/Orders",
+          "confidence": 95.15,
+          "bbox": [
+            1615,
+            408,
+            1784,
+            440
+          ]
+        },
+        {
+          "word": "00412",
+          "confidence": 99.92,
+          "bbox": [
+            87,
+            482,
+            171,
+            517
+          ]
+        },
+        {
+          "word": "HR(Rampal Maurya)1/1",
+          "confidence": 79.02,
+          "bbox": [
+            258,
+            477,
+            700,
+            522
+          ]
+        },
+        {
+          "word": "210/2",
+          "confidence": 99.63,
+          "bbox": [
+            889,
+            485,
+            967,
+            517
+          ]
+        },
+        {
+          "word": "0.5400",
+          "confidence": 99.84,
+          "bbox": [
+            1196,
+            485,
+            1277,
+            515
+          ]
+        },
+        {
+          "word": "22.00",
+          "confidence": 99.71,
+          "bbox": [
+            1429,
+            481,
+            1511,
+            517
+          ]
+        },
+        {
+          "word": "(Mi",
+          "confidence": 96.06,
+          "bbox": [
+            1831,
+            486,
+            1863,
+            505
+          ]
+        },
+        {
+          "word": "aT/af:Rd/OMITTED]",
+          "confidence": 71.83,
+          "bbox": [
+            271,
+            515,
+            593,
+            554
+          ]
+        },
+        {
+          "word": "Mohanlalganj",
+          "confidence": 94.88,
+          "bbox": [
+            270,
+            549,
+            488,
+            588
+          ]
+        },
+        {
+          "word": "SYNTHETIC DEMO RECORD",
+          "confidence": 95.05,
+          "bbox": [
+            379,
+            1122,
+            1670,
+            1198
+          ]
+        },
+        {
+          "word": "NOTOFFICIALGQVERNMENT RECORD",
+          "confidence": 94.76,
+          "bbox": [
+            426,
+            1229,
+            1393,
+            1279
+          ]
+        },
+        {
+          "word": "eRaRcDigitisedCopy-LandRecordsPrototype)",
+          "confidence": 85.64,
+          "bbox": [
+            424,
+            1462,
+            1307,
+            1505
+          ]
+        },
+        {
+          "word": "OOOOOOOOOO（DoCUmentID）:SYNTH-DOC-000",
+          "confidence": 65.97,
+          "bbox": [
+            429,
+            1508,
+            999,
+            1533
+          ]
+        },
+        {
+          "word": "UPCADASTRE",
+          "confidence": 98.98,
+          "bbox": [
+            204,
+            1533,
+            329,
+            1563
+          ]
+        },
+        {
+          "word": "alR/ur(RevenueInspector/Lekhpal-SyntheticSignature)",
+          "confidence": 83.86,
+          "bbox": [
+            426,
+            1544,
+            1194,
+            1582
+          ]
+        },
+        {
+          "word": "qHufqRafar",
+          "confidence": 57.22,
+          "bbox": [
+            186,
+            1569,
+            351,
+            1606
+          ]
+        },
+        {
+          "word": "中h2上h电n中hEb1中",
+          "confidence": 50.24,
+          "bbox": [
+            424,
+            1583,
+            1206,
+            1620
+          ]
+        },
+        {
+          "word": "DEMOREGISTRYMATCH-NOTANOFFICIALGOVERNMENTVERIFICATION",
+          "confidence": 99.23,
+          "bbox": [
+            542,
+            2498,
+            1325,
+            2523
+          ]
+        }
+      ]
+    }
+  ],
+  "sample_08_missing_field.jpg": [
+    {
+      "page_number": 1,
+      "raw_text": "SYNIHE ICDEMO RECORDGURONURUUOORDEMO/ ESI PURPOSESONY\n3dRqRGuHq Rg (Board of Revenue, UttarPradesh)\nBQRUl(3R3HR)/RECORDOFRIGHTS(ROR)\nRTHdf2006(ormRORUP Revenue Code2006)\nulfll(District)\nPrayagraj (Synthetic)\n·ll(Pargana)\nMau (Synthetic)\nifl d(asli Year)\n14301435\n(Tehsil)\nSoraon (Synthetic)\n/id(Village)Sarai Inayat\nl(KhataNo)\nS6000\n/f\nglt(met)\nel/-\nnfgif/\n(1）Khata No\nlLandhoider&ParenwSpouve\n(3)Ka No\n(4) Aea (a)\n(5）Rev()\n(6）Remrks/Ords\n00095\nld (Geeta Devi) 1 1/1\n33/1\n0.2890\n[R/BIANK]\nHe\nufd/uifal(Chandrabhan)\nSarai Inayat\nSYNTHETIC DEMO RECORD\nNOTOFFICIALGOVERNMENT RECORD\nouyefl uafefafnfuuRec (Digitised CopylandRecords Prototype)\n(DocumenIID) SYNIHDOC000\nUPCADASTRE\n/（Revenue Inspect/lkhalSynthetc Sinatue）\npephpyalnh\nDEMOREGISTRYMAICH NOIANOHICIAIGOVERNMENIVERIFICATION",
+      "word_count": 41,
+      "avg_confidence": 81.03,
+      "words": [
+        {
+          "word": "SYNIHE ICDEMO RECORDGURONURUUOORDEMO/ ESI PURPOSESONY",
+          "confidence": 78.06,
+          "bbox": [
+            279,
+            7,
+            1111,
+            35
+          ]
+        },
+        {
+          "word": "3dRqRGuHq Rg (Board of Revenue, UttarPradesh)",
+          "confidence": 83.23,
+          "bbox": [
+            306,
+            60,
+            1095,
+            94
+          ]
+        },
+        {
+          "word": "BQRUl(3R3HR)/RECORDOFRIGHTS(ROR)",
+          "confidence": 81.35,
+          "bbox": [
+            383,
+            99,
+            1019,
+            129
+          ]
+        },
+        {
+          "word": "RTHdf2006(ormRORUP Revenue Code2006)",
+          "confidence": 79.08,
+          "bbox": [
+            415,
+            132,
+            987,
+            161
+          ]
+        },
+        {
+          "word": "ulfll(District)",
+          "confidence": 80.76,
+          "bbox": [
+            56,
+            178,
+            178,
+            209
+          ]
+        },
+        {
+          "word": "Prayagraj (Synthetic)",
+          "confidence": 97.82,
+          "bbox": [
+            218,
+            183,
+            396,
+            209
+          ]
+        },
+        {
+          "word": "·ll(Pargana)",
+          "confidence": 87.94,
+          "bbox": [
+            498,
+            180,
+            639,
+            210
+          ]
+        },
+        {
+          "word": "Mau (Synthetic)",
+          "confidence": 96.55,
+          "bbox": [
+            678,
+            184,
+            813,
+            207
+          ]
+        },
+        {
+          "word": "ifl d(asli Year)",
+          "confidence": 84.56,
+          "bbox": [
+            947,
+            177,
+            1139,
+            210
+          ]
+        },
+        {
+          "word": "14301435",
+          "confidence": 99.79,
+          "bbox": [
+            1180,
+            184,
+            1271,
+            205
+          ]
+        },
+        {
+          "word": "(Tehsil)",
+          "confidence": 81.81,
+          "bbox": [
+            57,
+            212,
+            186,
+            242
+          ]
+        },
+        {
+          "word": "Soraon (Synthetic)",
+          "confidence": 96.14,
+          "bbox": [
+            217,
+            216,
+            376,
+            243
+          ]
+        },
+        {
+          "word": "/id(Village)Sarai Inayat",
+          "confidence": 89.27,
+          "bbox": [
+            499,
+            213,
+            782,
+            245
+          ]
+        },
+        {
+          "word": "l(KhataNo)",
+          "confidence": 75.62,
+          "bbox": [
+            950,
+            217,
+            1138,
+            241
+          ]
+        },
+        {
+          "word": "S6000",
+          "confidence": 90.86,
+          "bbox": [
+            1178,
+            218,
+            1233,
+            241
+          ]
+        },
+        {
+          "word": "/f",
+          "confidence": 54.93,
+          "bbox": [
+            276,
+            282,
+            554,
+            302
+          ]
+        },
+        {
+          "word": "glt(met)",
+          "confidence": 54.52,
+          "bbox": [
+            710,
+            279,
+            819,
+            305
+          ]
+        },
+        {
+          "word": "el/-",
+          "confidence": 60.08,
+          "bbox": [
+            1071,
+            281,
+            1190,
+            305
+          ]
+        },
+        {
+          "word": "nfgif/",
+          "confidence": 58.26,
+          "bbox": [
+            1215,
+            281,
+            1337,
+            304
+          ]
+        },
+        {
+          "word": "(1）Khata No",
+          "confidence": 72.39,
+          "bbox": [
+            75,
+            311,
+            152,
+            328
+          ]
+        },
+        {
+          "word": "lLandhoider&ParenwSpouve",
+          "confidence": 77.49,
+          "bbox": [
+            323,
+            311,
+            506,
+            328
+          ]
+        },
+        {
+          "word": "(3)Ka No",
+          "confidence": 73.55,
+          "bbox": [
+            722,
+            310,
+            806,
+            330
+          ]
+        },
+        {
+          "word": "(4) Aea (a)",
+          "confidence": 67.9,
+          "bbox": [
+            933,
+            310,
+            1012,
+            330
+          ]
+        },
+        {
+          "word": "(5）Rev()",
+          "confidence": 66.79,
+          "bbox": [
+            1097,
+            310,
+            1163,
+            330
+          ]
+        },
+        {
+          "word": "(6）Remrks/Ords",
+          "confidence": 82.57,
+          "bbox": [
+            1212,
+            309,
+            1337,
+            329
+          ]
+        },
+        {
+          "word": "00095",
+          "confidence": 99.92,
+          "bbox": [
+            67,
+            363,
+            128,
+            387
+          ]
+        },
+        {
+          "word": "ld (Geeta Devi) 1 1/1",
+          "confidence": 82.1,
+          "bbox": [
+            194,
+            357,
+            449,
+            390
+          ]
+        },
+        {
+          "word": "33/1",
+          "confidence": 99.69,
+          "bbox": [
+            668,
+            363,
+            715,
+            388
+          ]
+        },
+        {
+          "word": "0.2890",
+          "confidence": 96.06,
+          "bbox": [
+            897,
+            364,
+            958,
+            385
+          ]
+        },
+        {
+          "word": "[R/BIANK]",
+          "confidence": 86.08,
+          "bbox": [
+            1075,
+            361,
+            1205,
+            385
+          ]
+        },
+        {
+          "word": "He",
+          "confidence": 55.67,
+          "bbox": [
+            1210,
+            361,
+            1373,
+            381
+          ]
+        },
+        {
+          "word": "ufd/uifal(Chandrabhan)",
+          "confidence": 81.98,
+          "bbox": [
+            202,
+            385,
+            482,
+            418
+          ]
+        },
+        {
+          "word": "Sarai Inayat",
+          "confidence": 86.61,
+          "bbox": [
+            203,
+            411,
+            353,
+            441
+          ]
+        },
+        {
+          "word": "SYNTHETIC DEMO RECORD",
+          "confidence": 95.72,
+          "bbox": [
+            285,
+            842,
+            1251,
+            899
+          ]
+        },
+        {
+          "word": "NOTOFFICIALGOVERNMENT RECORD",
+          "confidence": 94.82,
+          "bbox": [
+            319,
+            923,
+            1047,
+            959
+          ]
+        },
+        {
+          "word": "ouyefl uafefafnfuuRec (Digitised CopylandRecords Prototype)",
+          "confidence": 77.9,
+          "bbox": [
+            320,
+            1099,
+            980,
+            1127
+          ]
+        },
+        {
+          "word": "(DocumenIID) SYNIHDOC000",
+          "confidence": 79.97,
+          "bbox": [
+            507,
+            1130,
+            750,
+            1150
+          ]
+        },
+        {
+          "word": "UPCADASTRE",
+          "confidence": 95.59,
+          "bbox": [
+            154,
+            1151,
+            246,
+            1171
+          ]
+        },
+        {
+          "word": "/（Revenue Inspect/lkhalSynthetc Sinatue）",
+          "confidence": 68.88,
+          "bbox": [
+            321,
+            1159,
+            896,
+            1183
+          ]
+        },
+        {
+          "word": "pephpyalnh",
+          "confidence": 63.05,
+          "bbox": [
+            140,
+            1179,
+            262,
+            1203
+          ]
+        },
+        {
+          "word": "DEMOREGISTRYMAICH NOIANOHICIAIGOVERNMENIVERIFICATION",
+          "confidence": 86.72,
+          "bbox": [
+            406,
+            1873,
+            994,
+            1892
+          ]
+        }
+      ]
+    }
+  ],
+  "sample_09_duplicate_original.pdf": [
+    {
+      "page_number": 1,
+      "raw_text": "SYNTHETICDEMORECORD3R(FORDEMO/TESTPURPOSESONLY\nBdRRGuHR(Board of Revenue,UttarPradesh)\nRU(RHR)/RECORDOFRIGHTS(ROR)\n-aI2006(FormROR-UPRevenueCode2006)\nTl(District):\nSitapur(Synthetic)\nI(Pargana):\nBari (Synthetic)\nRN(FasliYear):\n1430-1435\n(Tehsil):\nSidhauli (Synthetic)\n/(Village）:Beha\n(KhaNo)\n00550\n///\n(\n/\n(1)Khata No.\n(2)Landholder&Parent/Spouse\n(3)Khasra No.\n(4) Area (Ha)\n(5)Rev(R)\n(6)Remarks/Orders\n00550\nq(SatishChandra)I1/1\n188/5\n0.7200\n31.00\nqfa/qaf:3Hlpia(Umakant)\nRBelha\nSYNTHETIC DEMO RECORD\nNOTOFFICIALGQVERNMENT RECORD\neRafRcDigitisedCopy-LandRecordsPrototype)\nOOOOOOOOOO（DoCumentID）:SYNTH-DOC-000\nUPCADASTRE\nalR/ur(RevenueInspector/Lekhpal-SyntheticSignature)\nqHufqRafar\n中hh中n中hEb\nDEMOREGISTRYMATCH-NOTANOFFICIALGOVERNMENTVERIFICATION",
+      "word_count": 40,
+      "avg_confidence": 86.36,
+      "words": [
+        {
+          "word": "SYNTHETICDEMORECORD3R(FORDEMO/TESTPURPOSESONLY",
+          "confidence": 89.52,
+          "bbox": [
+            381,
+            10,
+            1485,
+            47
+          ]
+        },
+        {
+          "word": "BdRRGuHR(Board of Revenue,UttarPradesh)",
+          "confidence": 87.3,
+          "bbox": [
+            404,
+            77,
+            1463,
+            128
+          ]
+        },
+        {
+          "word": "RU(RHR)/RECORDOFRIGHTS(ROR)",
+          "confidence": 84.41,
+          "bbox": [
+            504,
+            128,
+            1359,
+            173
+          ]
+        },
+        {
+          "word": "-aI2006(FormROR-UPRevenueCode2006)",
+          "confidence": 84.66,
+          "bbox": [
+            551,
+            174,
+            1315,
+            214
+          ]
+        },
+        {
+          "word": "Tl(District):",
+          "confidence": 86.8,
+          "bbox": [
+            74,
+            236,
+            243,
+            279
+          ]
+        },
+        {
+          "word": "Sitapur(Synthetic)",
+          "confidence": 98.29,
+          "bbox": [
+            291,
+            245,
+            500,
+            277
+          ]
+        },
+        {
+          "word": "I(Pargana):",
+          "confidence": 91.68,
+          "bbox": [
+            665,
+            245,
+            858,
+            275
+          ]
+        },
+        {
+          "word": "Bari (Synthetic)",
+          "confidence": 96.58,
+          "bbox": [
+            903,
+            245,
+            1076,
+            275
+          ]
+        },
+        {
+          "word": "RN(FasliYear):",
+          "confidence": 86.06,
+          "bbox": [
+            1265,
+            237,
+            1524,
+            277
+          ]
+        },
+        {
+          "word": "1430-1435",
+          "confidence": 99.78,
+          "bbox": [
+            1571,
+            245,
+            1694,
+            275
+          ]
+        },
+        {
+          "word": "(Tehsil):",
+          "confidence": 82.44,
+          "bbox": [
+            76,
+            284,
+            256,
+            323
+          ]
+        },
+        {
+          "word": "Sidhauli (Synthetic)",
+          "confidence": 96.5,
+          "bbox": [
+            289,
+            286,
+            511,
+            323
+          ]
+        },
+        {
+          "word": "/(Village）:Beha",
+          "confidence": 81.38,
+          "bbox": [
+            663,
+            282,
+            975,
+            323
+          ]
+        },
+        {
+          "word": "(KhaNo)",
+          "confidence": 65.2,
+          "bbox": [
+            1265,
+            284,
+            1524,
+            323
+          ]
+        },
+        {
+          "word": "00550",
+          "confidence": 99.94,
+          "bbox": [
+            1568,
+            289,
+            1645,
+            321
+          ]
+        },
+        {
+          "word": "///",
+          "confidence": 64.21,
+          "bbox": [
+            369,
+            374,
+            738,
+            403
+          ]
+        },
+        {
+          "word": "(",
+          "confidence": 56.5,
+          "bbox": [
+            948,
+            375,
+            1090,
+            406
+          ]
+        },
+        {
+          "word": "/",
+          "confidence": 75.35,
+          "bbox": [
+            1426,
+            370,
+            1589,
+            408
+          ]
+        },
+        {
+          "word": "(1)Khata No.",
+          "confidence": 94.47,
+          "bbox": [
+            97,
+            409,
+            202,
+            439
+          ]
+        },
+        {
+          "word": "(2)Landholder&Parent/Spouse",
+          "confidence": 98.07,
+          "bbox": [
+            429,
+            412,
+            677,
+            438
+          ]
+        },
+        {
+          "word": "(3)Khasra No.",
+          "confidence": 91.43,
+          "bbox": [
+            962,
+            412,
+            1076,
+            439
+          ]
+        },
+        {
+          "word": "(4) Area (Ha)",
+          "confidence": 87.68,
+          "bbox": [
+            1240,
+            411,
+            1348,
+            441
+          ]
+        },
+        {
+          "word": "(5)Rev(R)",
+          "confidence": 84.28,
+          "bbox": [
+            1462,
+            411,
+            1553,
+            441
+          ]
+        },
+        {
+          "word": "(6)Remarks/Orders",
+          "confidence": 94.49,
+          "bbox": [
+            1614,
+            407,
+            1785,
+            440
+          ]
+        },
+        {
+          "word": "00550",
+          "confidence": 99.92,
+          "bbox": [
+            87,
+            485,
+            171,
+            515
+          ]
+        },
+        {
+          "word": "q(SatishChandra)I1/1",
+          "confidence": 84.55,
+          "bbox": [
+            257,
+            477,
+            670,
+            521
+          ]
+        },
+        {
+          "word": "188/5",
+          "confidence": 99.66,
+          "bbox": [
+            890,
+            482,
+            967,
+            518
+          ]
+        },
+        {
+          "word": "0.7200",
+          "confidence": 99.88,
+          "bbox": [
+            1196,
+            485,
+            1277,
+            515
+          ]
+        },
+        {
+          "word": "31.00",
+          "confidence": 99.73,
+          "bbox": [
+            1429,
+            484,
+            1511,
+            515
+          ]
+        },
+        {
+          "word": "qfa/qaf:3Hlpia(Umakant)",
+          "confidence": 74.02,
+          "bbox": [
+            271,
+            515,
+            587,
+            554
+          ]
+        },
+        {
+          "word": "RBelha",
+          "confidence": 82.55,
+          "bbox": [
+            268,
+            549,
+            413,
+            587
+          ]
+        },
+        {
+          "word": "SYNTHETIC DEMO RECORD",
+          "confidence": 95.7,
+          "bbox": [
+            379,
+            1122,
+            1670,
+            1198
+          ]
+        },
+        {
+          "word": "NOTOFFICIALGQVERNMENT RECORD",
+          "confidence": 95.94,
+          "bbox": [
+            426,
+            1229,
+            1393,
+            1279
+          ]
+        },
+        {
+          "word": "eRafRcDigitisedCopy-LandRecordsPrototype)",
+          "confidence": 85.31,
+          "bbox": [
+            424,
+            1462,
+            1307,
+            1505
+          ]
+        },
+        {
+          "word": "OOOOOOOOOO（DoCumentID）:SYNTH-DOC-000",
+          "confidence": 66.1,
+          "bbox": [
+            429,
+            1508,
+            999,
+            1533
+          ]
+        },
+        {
+          "word": "UPCADASTRE",
+          "confidence": 98.98,
+          "bbox": [
+            204,
+            1533,
+            329,
+            1563
+          ]
+        },
+        {
+          "word": "alR/ur(RevenueInspector/Lekhpal-SyntheticSignature)",
+          "confidence": 83.86,
+          "bbox": [
+            426,
+            1544,
+            1194,
+            1582
+          ]
+        },
+        {
+          "word": "qHufqRafar",
+          "confidence": 57.22,
+          "bbox": [
+            186,
+            1569,
+            351,
+            1606
+          ]
+        },
+        {
+          "word": "中hh中n中hEb",
+          "confidence": 54.72,
+          "bbox": [
+            424,
+            1583,
+            1206,
+            1620
+          ]
+        },
+        {
+          "word": "DEMOREGISTRYMATCH-NOTANOFFICIALGOVERNMENTVERIFICATION",
+          "confidence": 99.23,
+          "bbox": [
+            542,
+            2498,
+            1325,
+            2523
+          ]
+        }
+      ]
+    }
+  ],
+  "sample_10_duplicate_copy.pdf": [
+    {
+      "page_number": 1,
+      "raw_text": "SYNTHETICDEMORECORD3R(FORDEMO/TESTPURPOSESONLY\nBdRRGuHR(Board of Revenue,UttarPradesh)\nRU(RHR)/RECORDOFRIGHTS(ROR)\n-aI2006(FormROR-UPRevenueCode2006)\nTl(District):\nSitapur(Synthetic)\nI(Pargana):\nBari (Synthetic)\nRN(FasliYear):\n1430-1435\n(Tehsil):\nSidhauli (Synthetic)\n/(Village）:Beha\n(KhaNo)\n00550\n///\n(\n/\n(1)Khata No.\n(2)Landholder&Parent/Spouse\n(3)Khasra No.\n(4) Area (Ha)\n(5)Rev(R)\n(6)Remarks/Orders\n00550\nq(SatishChandra)I1/1\n188/5\n0.7200\n31.00\nqfa/qaf:3Hlpia(Umakant)\nRBelha\nSYNTHETIC DEMO RECORD\nNOTOFFICIALGQVERNMENT RECORD\neRafRcDigitisedCopy-LandRecordsPrototype)\nOOOOOOOOOO（DoCumentID）:SYNTH-DOC-000\nUPCADASTRE\nalR/ur(RevenueInspector/Lekhpal-SyntheticSignature)\nqHufqRafar\n中hh中n中hEb\nDEMOREGISTRYMATCH-NOTANOFFICIALGOVERNMENTVERIFICATION",
+      "word_count": 40,
+      "avg_confidence": 86.36,
+      "words": [
+        {
+          "word": "SYNTHETICDEMORECORD3R(FORDEMO/TESTPURPOSESONLY",
+          "confidence": 89.52,
+          "bbox": [
+            381,
+            10,
+            1485,
+            47
+          ]
+        },
+        {
+          "word": "BdRRGuHR(Board of Revenue,UttarPradesh)",
+          "confidence": 87.3,
+          "bbox": [
+            404,
+            77,
+            1463,
+            128
+          ]
+        },
+        {
+          "word": "RU(RHR)/RECORDOFRIGHTS(ROR)",
+          "confidence": 84.41,
+          "bbox": [
+            504,
+            128,
+            1359,
+            173
+          ]
+        },
+        {
+          "word": "-aI2006(FormROR-UPRevenueCode2006)",
+          "confidence": 84.66,
+          "bbox": [
+            551,
+            174,
+            1315,
+            214
+          ]
+        },
+        {
+          "word": "Tl(District):",
+          "confidence": 86.8,
+          "bbox": [
+            74,
+            236,
+            243,
+            279
+          ]
+        },
+        {
+          "word": "Sitapur(Synthetic)",
+          "confidence": 98.29,
+          "bbox": [
+            291,
+            245,
+            500,
+            277
+          ]
+        },
+        {
+          "word": "I(Pargana):",
+          "confidence": 91.68,
+          "bbox": [
+            665,
+            245,
+            858,
+            275
+          ]
+        },
+        {
+          "word": "Bari (Synthetic)",
+          "confidence": 96.58,
+          "bbox": [
+            903,
+            245,
+            1076,
+            275
+          ]
+        },
+        {
+          "word": "RN(FasliYear):",
+          "confidence": 86.06,
+          "bbox": [
+            1265,
+            237,
+            1524,
+            277
+          ]
+        },
+        {
+          "word": "1430-1435",
+          "confidence": 99.78,
+          "bbox": [
+            1571,
+            245,
+            1694,
+            275
+          ]
+        },
+        {
+          "word": "(Tehsil):",
+          "confidence": 82.44,
+          "bbox": [
+            76,
+            284,
+            256,
+            323
+          ]
+        },
+        {
+          "word": "Sidhauli (Synthetic)",
+          "confidence": 96.5,
+          "bbox": [
+            289,
+            286,
+            511,
+            323
+          ]
+        },
+        {
+          "word": "/(Village）:Beha",
+          "confidence": 81.38,
+          "bbox": [
+            663,
+            282,
+            975,
+            323
+          ]
+        },
+        {
+          "word": "(KhaNo)",
+          "confidence": 65.2,
+          "bbox": [
+            1265,
+            284,
+            1524,
+            323
+          ]
+        },
+        {
+          "word": "00550",
+          "confidence": 99.94,
+          "bbox": [
+            1568,
+            289,
+            1645,
+            321
+          ]
+        },
+        {
+          "word": "///",
+          "confidence": 64.21,
+          "bbox": [
+            369,
+            374,
+            738,
+            403
+          ]
+        },
+        {
+          "word": "(",
+          "confidence": 56.5,
+          "bbox": [
+            948,
+            375,
+            1090,
+            406
+          ]
+        },
+        {
+          "word": "/",
+          "confidence": 75.35,
+          "bbox": [
+            1426,
+            370,
+            1589,
+            408
+          ]
+        },
+        {
+          "word": "(1)Khata No.",
+          "confidence": 94.47,
+          "bbox": [
+            97,
+            409,
+            202,
+            439
+          ]
+        },
+        {
+          "word": "(2)Landholder&Parent/Spouse",
+          "confidence": 98.07,
+          "bbox": [
+            429,
+            412,
+            677,
+            438
+          ]
+        },
+        {
+          "word": "(3)Khasra No.",
+          "confidence": 91.43,
+          "bbox": [
+            962,
+            412,
+            1076,
+            439
+          ]
+        },
+        {
+          "word": "(4) Area (Ha)",
+          "confidence": 87.68,
+          "bbox": [
+            1240,
+            411,
+            1348,
+            441
+          ]
+        },
+        {
+          "word": "(5)Rev(R)",
+          "confidence": 84.28,
+          "bbox": [
+            1462,
+            411,
+            1553,
+            441
+          ]
+        },
+        {
+          "word": "(6)Remarks/Orders",
+          "confidence": 94.49,
+          "bbox": [
+            1614,
+            407,
+            1785,
+            440
+          ]
+        },
+        {
+          "word": "00550",
+          "confidence": 99.92,
+          "bbox": [
+            87,
+            485,
+            171,
+            515
+          ]
+        },
+        {
+          "word": "q(SatishChandra)I1/1",
+          "confidence": 84.55,
+          "bbox": [
+            257,
+            477,
+            670,
+            521
+          ]
+        },
+        {
+          "word": "188/5",
+          "confidence": 99.66,
+          "bbox": [
+            890,
+            482,
+            967,
+            518
+          ]
+        },
+        {
+          "word": "0.7200",
+          "confidence": 99.88,
+          "bbox": [
+            1196,
+            485,
+            1277,
+            515
+          ]
+        },
+        {
+          "word": "31.00",
+          "confidence": 99.73,
+          "bbox": [
+            1429,
+            484,
+            1511,
+            515
+          ]
+        },
+        {
+          "word": "qfa/qaf:3Hlpia(Umakant)",
+          "confidence": 74.02,
+          "bbox": [
+            271,
+            515,
+            587,
+            554
+          ]
+        },
+        {
+          "word": "RBelha",
+          "confidence": 82.55,
+          "bbox": [
+            268,
+            549,
+            413,
+            587
+          ]
+        },
+        {
+          "word": "SYNTHETIC DEMO RECORD",
+          "confidence": 95.7,
+          "bbox": [
+            379,
+            1122,
+            1670,
+            1198
+          ]
+        },
+        {
+          "word": "NOTOFFICIALGQVERNMENT RECORD",
+          "confidence": 95.94,
+          "bbox": [
+            426,
+            1229,
+            1393,
+            1279
+          ]
+        },
+        {
+          "word": "eRafRcDigitisedCopy-LandRecordsPrototype)",
+          "confidence": 85.31,
+          "bbox": [
+            424,
+            1462,
+            1307,
+            1505
+          ]
+        },
+        {
+          "word": "OOOOOOOOOO（DoCumentID）:SYNTH-DOC-000",
+          "confidence": 66.1,
+          "bbox": [
+            429,
+            1508,
+            999,
+            1533
+          ]
+        },
+        {
+          "word": "UPCADASTRE",
+          "confidence": 98.98,
+          "bbox": [
+            204,
+            1533,
+            329,
+            1563
+          ]
+        },
+        {
+          "word": "alR/ur(RevenueInspector/Lekhpal-SyntheticSignature)",
+          "confidence": 83.86,
+          "bbox": [
+            426,
+            1544,
+            1194,
+            1582
+          ]
+        },
+        {
+          "word": "qHufqRafar",
+          "confidence": 57.22,
+          "bbox": [
+            186,
+            1569,
+            351,
+            1606
+          ]
+        },
+        {
+          "word": "中hh中n中hEb",
+          "confidence": 54.72,
+          "bbox": [
+            424,
+            1583,
+            1206,
+            1620
+          ]
+        },
+        {
+          "word": "DEMOREGISTRYMATCH-NOTANOFFICIALGOVERNMENTVERIFICATION",
+          "confidence": 99.23,
+          "bbox": [
+            542,
+            2498,
+            1325,
+            2523
+          ]
+        }
+      ]
+    }
+  ],
+  "sample_11_wrong_khasra.pdf": [
+    {
+      "page_number": 1,
+      "raw_text": "SYNTHETICDEMORECORD3R(FORDEMO/TESTPURPOSESONLY\nBdRRGuHR(Board of Revenue,UttarPradesh)\nRU(RHR)/RECORDOFRIGHTS(ROR)\n-TI2006（FormROR-UPRevenueCode2006)\nTl(District):\nVaranasi(Synthetic)\nI(Pargana):\nKolaslah(Synthetic)\nRN(FasliYear):\n1430-1435\n(Tehsil):\nPindra (Synthetic)\nRH/Ta(Village):Shivpur\n(KhaNo)\n00619\n//h/\n(\n/\n(1)Khata No.\n(2)Landholder&Parent/Spouse\n(3)Khasra No.\n(4) Area (Ha)\n(5）Rev(R)\n（6)Remarks/Orders\n00619\n999/INVALID\n0.4500\n19.50\nR\nfa/qaf:HuafaRfqit(KamlapatiTripathi)\nShivpur\nSYNTHETIC DEMO RECORD\nNOTOFFICIALGQVERNMENT RECORD\neRafRcDigitisedCopy-LandRecordsPrototype)\nOOOOOOOOOO（DoCumentID）:SYNTH-DOC-000\nUPCADASTRE\nalR/ur(RevenueInspector/Lekhpal-SyntheticSignature)\nqHufqRafar\n中hh中n中hEb\nDEMOREGISTRYMATCH-NOTANOFFICIALGOVERNMENTVERIFICATION",
+      "word_count": 40,
+      "avg_confidence": 85.51,
+      "words": [
+        {
+          "word": "SYNTHETICDEMORECORD3R(FORDEMO/TESTPURPOSESONLY",
+          "confidence": 89.51,
+          "bbox": [
+            381,
+            10,
+            1485,
+            47
+          ]
+        },
+        {
+          "word": "BdRRGuHR(Board of Revenue,UttarPradesh)",
+          "confidence": 87.3,
+          "bbox": [
+            404,
+            77,
+            1463,
+            128
+          ]
+        },
+        {
+          "word": "RU(RHR)/RECORDOFRIGHTS(ROR)",
+          "confidence": 84.36,
+          "bbox": [
+            504,
+            128,
+            1359,
+            173
+          ]
+        },
+        {
+          "word": "-TI2006（FormROR-UPRevenueCode2006)",
+          "confidence": 83.68,
+          "bbox": [
+            552,
+            174,
+            1314,
+            213
+          ]
+        },
+        {
+          "word": "Tl(District):",
+          "confidence": 86.85,
+          "bbox": [
+            74,
+            236,
+            243,
+            279
+          ]
+        },
+        {
+          "word": "Varanasi(Synthetic)",
+          "confidence": 98.07,
+          "bbox": [
+            289,
+            243,
+            517,
+            277
+          ]
+        },
+        {
+          "word": "I(Pargana):",
+          "confidence": 92.49,
+          "bbox": [
+            665,
+            245,
+            858,
+            275
+          ]
+        },
+        {
+          "word": "Kolaslah(Synthetic)",
+          "confidence": 97.75,
+          "bbox": [
+            904,
+            242,
+            1127,
+            275
+          ]
+        },
+        {
+          "word": "RN(FasliYear):",
+          "confidence": 86.51,
+          "bbox": [
+            1265,
+            237,
+            1524,
+            277
+          ]
+        },
+        {
+          "word": "1430-1435",
+          "confidence": 99.78,
+          "bbox": [
+            1571,
+            245,
+            1694,
+            275
+          ]
+        },
+        {
+          "word": "(Tehsil):",
+          "confidence": 82.5,
+          "bbox": [
+            76,
+            284,
+            256,
+            323
+          ]
+        },
+        {
+          "word": "Pindra (Synthetic)",
+          "confidence": 95.53,
+          "bbox": [
+            287,
+            288,
+            494,
+            323
+          ]
+        },
+        {
+          "word": "RH/Ta(Village):Shivpur",
+          "confidence": 83.93,
+          "bbox": [
+            663,
+            283,
+            995,
+            325
+          ]
+        },
+        {
+          "word": "(KhaNo)",
+          "confidence": 66.19,
+          "bbox": [
+            1265,
+            284,
+            1524,
+            323
+          ]
+        },
+        {
+          "word": "00619",
+          "confidence": 99.88,
+          "bbox": [
+            1568,
+            289,
+            1645,
+            321
+          ]
+        },
+        {
+          "word": "//h/",
+          "confidence": 56.98,
+          "bbox": [
+            369,
+            374,
+            738,
+            403
+          ]
+        },
+        {
+          "word": "(",
+          "confidence": 55.73,
+          "bbox": [
+            948,
+            375,
+            1090,
+            406
+          ]
+        },
+        {
+          "word": "/",
+          "confidence": 74.79,
+          "bbox": [
+            1426,
+            370,
+            1589,
+            408
+          ]
+        },
+        {
+          "word": "(1)Khata No.",
+          "confidence": 94.5,
+          "bbox": [
+            97,
+            409,
+            202,
+            439
+          ]
+        },
+        {
+          "word": "(2)Landholder&Parent/Spouse",
+          "confidence": 94.42,
+          "bbox": [
+            427,
+            408,
+            678,
+            440
+          ]
+        },
+        {
+          "word": "(3)Khasra No.",
+          "confidence": 89.94,
+          "bbox": [
+            961,
+            411,
+            1076,
+            438
+          ]
+        },
+        {
+          "word": "(4) Area (Ha)",
+          "confidence": 87.24,
+          "bbox": [
+            1240,
+            411,
+            1348,
+            441
+          ]
+        },
+        {
+          "word": "(5）Rev(R)",
+          "confidence": 84.03,
+          "bbox": [
+            1462,
+            411,
+            1553,
+            441
+          ]
+        },
+        {
+          "word": "（6)Remarks/Orders",
+          "confidence": 92.17,
+          "bbox": [
+            1615,
+            411,
+            1783,
+            436
+          ]
+        },
+        {
+          "word": "00619",
+          "confidence": 99.89,
+          "bbox": [
+            87,
+            485,
+            169,
+            515
+          ]
+        },
+        {
+          "word": "999/INVALID",
+          "confidence": 98.17,
+          "bbox": [
+            891,
+            486,
+            1047,
+            515
+          ]
+        },
+        {
+          "word": "0.4500",
+          "confidence": 99.84,
+          "bbox": [
+            1196,
+            485,
+            1277,
+            515
+          ]
+        },
+        {
+          "word": "19.50",
+          "confidence": 99.75,
+          "bbox": [
+            1429,
+            484,
+            1511,
+            515
+          ]
+        },
+        {
+          "word": "R",
+          "confidence": 61.93,
+          "bbox": [
+            1612,
+            476,
+            1865,
+            513
+          ]
+        },
+        {
+          "word": "fa/qaf:HuafaRfqit(KamlapatiTripathi)",
+          "confidence": 74.86,
+          "bbox": [
+            268,
+            514,
+            795,
+            555
+          ]
+        },
+        {
+          "word": "Shivpur",
+          "confidence": 85.9,
+          "bbox": [
+            271,
+            551,
+            431,
+            586
+          ]
+        },
+        {
+          "word": "SYNTHETIC DEMO RECORD",
+          "confidence": 94.54,
+          "bbox": [
+            380,
+            1125,
+            1669,
+            1196
+          ]
+        },
+        {
+          "word": "NOTOFFICIALGQVERNMENT RECORD",
+          "confidence": 95.94,
+          "bbox": [
+            426,
+            1229,
+            1393,
+            1279
+          ]
+        },
+        {
+          "word": "eRafRcDigitisedCopy-LandRecordsPrototype)",
+          "confidence": 85.31,
+          "bbox": [
+            424,
+            1462,
+            1307,
+            1505
+          ]
+        },
+        {
+          "word": "OOOOOOOOOO（DoCumentID）:SYNTH-DOC-000",
+          "confidence": 66.1,
+          "bbox": [
+            429,
+            1508,
+            999,
+            1533
+          ]
+        },
+        {
+          "word": "UPCADASTRE",
+          "confidence": 98.98,
+          "bbox": [
+            204,
+            1533,
+            329,
+            1563
+          ]
+        },
+        {
+          "word": "alR/ur(RevenueInspector/Lekhpal-SyntheticSignature)",
+          "confidence": 83.86,
+          "bbox": [
+            426,
+            1544,
+            1194,
+            1582
+          ]
+        },
+        {
+          "word": "qHufqRafar",
+          "confidence": 57.22,
+          "bbox": [
+            186,
+            1569,
+            351,
+            1606
+          ]
+        },
+        {
+          "word": "中hh中n中hEb",
+          "confidence": 54.72,
+          "bbox": [
+            424,
+            1583,
+            1206,
+            1620
+          ]
+        },
+        {
+          "word": "DEMOREGISTRYMATCH-NOTANOFFICIALGOVERNMENTVERIFICATION",
+          "confidence": 99.23,
+          "bbox": [
+            542,
+            2498,
+            1325,
+            2523
+          ]
+        }
+      ]
+    }
+  ],
+  "sample_12_co_tenants_clean.jpg": [
+    {
+      "page_number": 1,
+      "raw_text": "SYNIHE ICDEMORECORDGUNURUOORDEMO/ TESI PURPOSESONY\nBdRqRGxITuHgRfg (Board of Revenue, UttarPradesh)\nBQRUl(3fR3HR)/RECORDOFRIGHTS(ROR)\nHdf 2006(ormRORUPRevenue Code2006)\nulfll(District)\nGorakhpur (Synthetic)\n·ll (Pargana)\nHasanpur (Synthetic)\nfdN(fasliYear)\n1430-1435\n（fle (Tehsil)\nSahjanwa (Synthetic)\n/d(Village)Alinagar\nl(Khata No)\n00334\n//f\n(me)\nel/-\nnfgif/\n(1）Khata No\n1andhoider&ParenwSpouM\n3）KaNo\n(4) Aoa (a)\n(5）Rev()\n(6）Remrks/Ords\n00334\n(Manoj Kumar) 1 1/2\n104/1,104/2\n0.9800\n40.00\nAa\nufdi/uifalqctie (Babulal)\njebeuvl\ndl&  (Vinod Kumar)  1/)\nufduifll(Babulal)\nm Alinagar\nSYNTHETIC DEMO RECORD\nNOTOFFICIALGOVERNMENT RECORD\nouyefl uafefafnfuuRec (Digitised CopylandRecords Prototype)\n(DocumenIID)SYNfHDOC0O0\nUPCADASTRE\n/ue（Revenue Inspector/lkhalSyntheticSignature)\nqurfdufafof\nDEMOREGISTRYMAICH NOIANOHICIAIGOVERNMENIVERIFICATION",
+      "word_count": 44,
+      "avg_confidence": 80.01,
+      "words": [
+        {
+          "word": "SYNIHE ICDEMORECORDGUNURUOORDEMO/ TESI PURPOSESONY",
+          "confidence": 79.02,
+          "bbox": [
+            279,
+            7,
+            1112,
+            35
+          ]
+        },
+        {
+          "word": "BdRqRGxITuHgRfg (Board of Revenue, UttarPradesh)",
+          "confidence": 81.8,
+          "bbox": [
+            306,
+            60,
+            1095,
+            94
+          ]
+        },
+        {
+          "word": "BQRUl(3fR3HR)/RECORDOFRIGHTS(ROR)",
+          "confidence": 82.04,
+          "bbox": [
+            383,
+            99,
+            1019,
+            129
+          ]
+        },
+        {
+          "word": "Hdf 2006(ormRORUPRevenue Code2006)",
+          "confidence": 79.58,
+          "bbox": [
+            415,
+            132,
+            987,
+            161
+          ]
+        },
+        {
+          "word": "ulfll(District)",
+          "confidence": 80.41,
+          "bbox": [
+            56,
+            178,
+            178,
+            209
+          ]
+        },
+        {
+          "word": "Gorakhpur (Synthetic)",
+          "confidence": 96.69,
+          "bbox": [
+            219,
+            181,
+            405,
+            209
+          ]
+        },
+        {
+          "word": "·ll (Pargana)",
+          "confidence": 84.93,
+          "bbox": [
+            498,
+            180,
+            639,
+            210
+          ]
+        },
+        {
+          "word": "Hasanpur (Synthetic)",
+          "confidence": 96.8,
+          "bbox": [
+            678,
+            184,
+            855,
+            207
+          ]
+        },
+        {
+          "word": "fdN(fasliYear)",
+          "confidence": 77.75,
+          "bbox": [
+            947,
+            178,
+            1139,
+            209
+          ]
+        },
+        {
+          "word": "1430-1435",
+          "confidence": 96.21,
+          "bbox": [
+            1179,
+            183,
+            1270,
+            204
+          ]
+        },
+        {
+          "word": "（fle (Tehsil)",
+          "confidence": 69.47,
+          "bbox": [
+            57,
+            214,
+            185,
+            242
+          ]
+        },
+        {
+          "word": "Sahjanwa (Synthetic)",
+          "confidence": 96.76,
+          "bbox": [
+            218,
+            216,
+            397,
+            243
+          ]
+        },
+        {
+          "word": "/d(Village)Alinagar",
+          "confidence": 85.6,
+          "bbox": [
+            498,
+            213,
+            754,
+            245
+          ]
+        },
+        {
+          "word": "l(Khata No)",
+          "confidence": 73.65,
+          "bbox": [
+            950,
+            217,
+            1138,
+            241
+          ]
+        },
+        {
+          "word": "00334",
+          "confidence": 99.79,
+          "bbox": [
+            1175,
+            215,
+            1234,
+            243
+          ]
+        },
+        {
+          "word": "//f",
+          "confidence": 53.78,
+          "bbox": [
+            276,
+            282,
+            554,
+            302
+          ]
+        },
+        {
+          "word": "(me)",
+          "confidence": 63.65,
+          "bbox": [
+            710,
+            280,
+            819,
+            305
+          ]
+        },
+        {
+          "word": "el/-",
+          "confidence": 59.51,
+          "bbox": [
+            1071,
+            281,
+            1190,
+            305
+          ]
+        },
+        {
+          "word": "nfgif/",
+          "confidence": 57.62,
+          "bbox": [
+            1215,
+            281,
+            1336,
+            304
+          ]
+        },
+        {
+          "word": "(1）Khata No",
+          "confidence": 73.58,
+          "bbox": [
+            75,
+            311,
+            151,
+            328
+          ]
+        },
+        {
+          "word": "1andhoider&ParenwSpouM",
+          "confidence": 80.55,
+          "bbox": [
+            323,
+            311,
+            505,
+            328
+          ]
+        },
+        {
+          "word": "3）KaNo",
+          "confidence": 74.04,
+          "bbox": [
+            723,
+            311,
+            805,
+            328
+          ]
+        },
+        {
+          "word": "(4) Aoa (a)",
+          "confidence": 68.87,
+          "bbox": [
+            933,
+            310,
+            1012,
+            330
+          ]
+        },
+        {
+          "word": "(5）Rev()",
+          "confidence": 66.24,
+          "bbox": [
+            1097,
+            310,
+            1163,
+            330
+          ]
+        },
+        {
+          "word": "(6）Remrks/Ords",
+          "confidence": 82.22,
+          "bbox": [
+            1212,
+            309,
+            1337,
+            329
+          ]
+        },
+        {
+          "word": "00334",
+          "confidence": 99.97,
+          "bbox": [
+            67,
+            363,
+            128,
+            387
+          ]
+        },
+        {
+          "word": "(Manoj Kumar) 1 1/2",
+          "confidence": 80.85,
+          "bbox": [
+            193,
+            359,
+            497,
+            391
+          ]
+        },
+        {
+          "word": "104/1,104/2",
+          "confidence": 97.77,
+          "bbox": [
+            668,
+            361,
+            786,
+            388
+          ]
+        },
+        {
+          "word": "0.9800",
+          "confidence": 97.96,
+          "bbox": [
+            897,
+            364,
+            958,
+            385
+          ]
+        },
+        {
+          "word": "40.00",
+          "confidence": 96.93,
+          "bbox": [
+            1073,
+            362,
+            1135,
+            386
+          ]
+        },
+        {
+          "word": "Aa",
+          "confidence": 54.98,
+          "bbox": [
+            1210,
+            357,
+            1398,
+            384
+          ]
+        },
+        {
+          "word": "ufdi/uifalqctie (Babulal)",
+          "confidence": 67.05,
+          "bbox": [
+            202,
+            386,
+            427,
+            418
+          ]
+        },
+        {
+          "word": "jebeuvl",
+          "confidence": 68.26,
+          "bbox": [
+            202,
+            411,
+            328,
+            442
+          ]
+        },
+        {
+          "word": "dl&  (Vinod Kumar)  1/)",
+          "confidence": 84.43,
+          "bbox": [
+            194,
+            447,
+            496,
+            483
+          ]
+        },
+        {
+          "word": "ufduifll(Babulal)",
+          "confidence": 76.78,
+          "bbox": [
+            202,
+            476,
+            427,
+            508
+          ]
+        },
+        {
+          "word": "m Alinagar",
+          "confidence": 81.75,
+          "bbox": [
+            203,
+            503,
+            328,
+            531
+          ]
+        },
+        {
+          "word": "SYNTHETIC DEMO RECORD",
+          "confidence": 93.53,
+          "bbox": [
+            285,
+            842,
+            1251,
+            899
+          ]
+        },
+        {
+          "word": "NOTOFFICIALGOVERNMENT RECORD",
+          "confidence": 95.16,
+          "bbox": [
+            319,
+            923,
+            1047,
+            959
+          ]
+        },
+        {
+          "word": "ouyefl uafefafnfuuRec (Digitised CopylandRecords Prototype)",
+          "confidence": 77.8,
+          "bbox": [
+            320,
+            1099,
+            980,
+            1127
+          ]
+        },
+        {
+          "word": "(DocumenIID)SYNfHDOC0O0",
+          "confidence": 77.14,
+          "bbox": [
+            507,
+            1130,
+            750,
+            1150
+          ]
+        },
+        {
+          "word": "UPCADASTRE",
+          "confidence": 95.59,
+          "bbox": [
+            154,
+            1151,
+            246,
+            1171
+          ]
+        },
+        {
+          "word": "/ue（Revenue Inspector/lkhalSyntheticSignature)",
+          "confidence": 71.05,
+          "bbox": [
+            321,
+            1159,
+            896,
+            1183
+          ]
+        },
+        {
+          "word": "qurfdufafof",
+          "confidence": 55.96,
+          "bbox": [
+            139,
+            1178,
+            261,
+            1202
+          ]
+        },
+        {
+          "word": "DEMOREGISTRYMAICH NOIANOHICIAIGOVERNMENIVERIFICATION",
+          "confidence": 86.74,
+          "bbox": [
+            406,
+            1873,
+            994,
+            1892
+          ]
+        }
+      ]
+    }
+  ]
+}

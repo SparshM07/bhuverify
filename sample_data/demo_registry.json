@@ -1,0 +1,372 @@
+{
+  "disclaimer": "Demo registry match - not an official government verification",
+  "total_records": 12,
+  "registry_records": [
+    {
+      "registry_record_id": "REG-UP-REF-001",
+      "document_reference": "sample_01_clean.pdf",
+      "document_id": "SYNTH-UP-2026-001",
+      "notice": "Demo registry match - not an official government verification",
+      "state": "Uttar Pradesh",
+      "district": "Lucknow (Synthetic)",
+      "tehsil": "Bakshi Ka Talab (Synthetic)",
+      "pargana": "Mahona (Synthetic)",
+      "village": "Syntheticpur",
+      "fasli_year": "1430-1435",
+      "khata_number": "00124",
+      "khasra_numbers": [
+        "45/1",
+        "45/2",
+        "46"
+      ],
+      "land_area_hectares": 0.405,
+      "revenue_inr": 18.5,
+      "landholders": [
+        {
+          "name": "रमेश कुमार (Ramesh Kumar)",
+          "parent_name": "सुरेश कुमार (Suresh Kumar)",
+          "share_fraction": "1/2",
+          "residence": "नि० ग्राम Syntheticpur"
+        },
+        {
+          "name": "दिनेश कुमार (Dinesh Kumar)",
+          "parent_name": "सुरेश कुमार (Suresh Kumar)",
+          "share_fraction": "1/2",
+          "residence": "नि० ग्राम Syntheticpur"
+        }
+      ],
+      "verified_in_registry": true,
+      "has_deliberate_mismatch": false,
+      "mismatch_reason": null
+    },
+    {
+      "registry_record_id": "REG-UP-REF-002",
+      "document_reference": "sample_02_clean.png",
+      "document_id": "SYNTH-UP-2026-002",
+      "notice": "Demo registry match - not an official government verification",
+      "state": "Uttar Pradesh",
+      "district": "Varanasi (Synthetic)",
+      "tehsil": "Sadar (Synthetic)",
+      "pargana": "Dehat (Synthetic)",
+      "village": "Mohanpur",
+      "fasli_year": "1430-1435",
+      "khata_number": "00088",
+      "khasra_numbers": [
+        "112/3"
+      ],
+      "land_area_hectares": 0.821,
+      "revenue_inr": 34.0,
+      "landholders": [
+        {
+          "name": "दिनेश यादव (Dinesh Yadav)",
+          "parent_name": "रामेश्वर यादव (Rameshwar Yadav)",
+          "share_fraction": "1/1",
+          "residence": "नि० ग्राम Mohanpur"
+        }
+      ],
+      "verified_in_registry": true,
+      "has_deliberate_mismatch": false,
+      "mismatch_reason": null
+    },
+    {
+      "registry_record_id": "REG-UP-REF-003",
+      "document_reference": "sample_03_rotated_cw.pdf",
+      "document_id": "SYNTH-UP-2026-003",
+      "notice": "Demo registry match - not an official government verification",
+      "state": "Uttar Pradesh",
+      "district": "Ayodhya (Synthetic)",
+      "tehsil": "Sohawal (Synthetic)",
+      "pargana": "Haveli (Synthetic)",
+      "village": "Rampur Kalan",
+      "fasli_year": "1430-1435",
+      "khata_number": "00315",
+      "khasra_numbers": [
+        "78/2",
+        "79"
+      ],
+      "land_area_hectares": 0.25,
+      "revenue_inr": 12.0,
+      "landholders": [
+        {
+          "name": "अनीता देवी (Anita Devi)",
+          "parent_name": "विजय प्रताप (Vijay Pratap)",
+          "share_fraction": "1/1",
+          "residence": "नि० ग्राम Rampur Kalan"
+        }
+      ],
+      "verified_in_registry": true,
+      "has_deliberate_mismatch": false,
+      "mismatch_reason": null
+    },
+    {
+      "registry_record_id": "REG-UP-REF-004",
+      "document_reference": "sample_04_rotated_ccw.jpg",
+      "document_id": "SYNTH-UP-2026-004",
+      "notice": "Demo registry match - not an official government verification",
+      "state": "Uttar Pradesh",
+      "district": "Barabanki (Synthetic)",
+      "tehsil": "Fatehpur (Synthetic)",
+      "pargana": "Kursi (Synthetic)",
+      "village": "Baragaon",
+      "fasli_year": "1430-1435",
+      "khata_number": "00142",
+      "khasra_numbers": [
+        "54/1",
+        "54/2"
+      ],
+      "land_area_hectares": 0.612,
+      "revenue_inr": 26.5,
+      "landholders": [
+        {
+          "name": "मोहम्मद आरिफ़ (Mohammad Arif)",
+          "parent_name": "इब्राहिम खान (Ibrahim Khan)",
+          "share_fraction": "1/1",
+          "residence": "नि० ग्राम Baragaon"
+        }
+      ],
+      "verified_in_registry": true,
+      "has_deliberate_mismatch": false,
+      "mismatch_reason": null
+    },
+    {
+      "registry_record_id": "REG-UP-REF-005",
+      "document_reference": "sample_05_low_contrast.pdf",
+      "document_id": "SYNTH-UP-2026-005",
+      "notice": "Demo registry match - not an official government verification",
+      "state": "Uttar Pradesh",
+      "district": "Kanpur Nagar (Synthetic)",
+      "tehsil": "Ghatampur (Synthetic)",
+      "pargana": "Akbarpur (Synthetic)",
+      "village": "Govindpur",
+      "fasli_year": "1430-1435",
+      "khata_number": "00204",
+      "khasra_numbers": [
+        "99/1"
+      ],
+      "land_area_hectares": 1.15,
+      "revenue_inr": 45.0,
+      "landholders": [
+        {
+          "name": "हरिशंकर वर्मा (Harishankar Verma)",
+          "parent_name": "बालमुकुंद वर्मा (Balmukund Verma)",
+          "share_fraction": "1/1",
+          "residence": "नि० ग्राम Govindpur"
+        }
+      ],
+      "verified_in_registry": true,
+      "has_deliberate_mismatch": false,
+      "mismatch_reason": null
+    },
+    {
+      "registry_record_id": "REG-UP-REF-006",
+      "document_reference": "sample_06_low_contrast.png",
+      "document_id": "SYNTH-UP-2026-006",
+      "notice": "Demo registry match - not an official government verification",
+      "state": "Uttar Pradesh",
+      "district": "Prayagraj (Synthetic)",
+      "tehsil": "Phulpur (Synthetic)",
+      "pargana": "Jhusi (Synthetic)",
+      "village": "Kalyanpur",
+      "fasli_year": "1430-1435",
+      "khata_number": "00073",
+      "khasra_numbers": [
+        "16/4"
+      ],
+      "land_area_hectares": 0.334,
+      "revenue_inr": 15.2,
+      "landholders": [
+        {
+          "name": "सुनीता सिंह (Sunita Singh)",
+          "parent_name": "राजेंद्र सिंह (Rajendra Singh)",
+          "share_fraction": "1/1",
+          "residence": "नि० ग्राम Kalyanpur"
+        }
+      ],
+      "verified_in_registry": true,
+      "has_deliberate_mismatch": false,
+      "mismatch_reason": null
+    },
+    {
+      "registry_record_id": "REG-UP-REF-007",
+      "document_reference": "sample_07_missing_field.pdf",
+      "document_id": "SYNTH-UP-2026-007",
+      "notice": "Demo registry match - not an official government verification",
+      "state": "Uttar Pradesh",
+      "district": "Lucknow (Synthetic)",
+      "tehsil": "Mohanlalganj (Synthetic)",
+      "pargana": "Nigohan (Synthetic)",
+      "village": "Mohanlalganj",
+      "fasli_year": "1430-1435",
+      "khata_number": "00412",
+      "khasra_numbers": [
+        "210/2"
+      ],
+      "land_area_hectares": 0.54,
+      "revenue_inr": 22.0,
+      "landholders": [
+        {
+          "name": "रामपाल मौर्य (Rampal Maurya)",
+          "parent_name": "स्व० राम भरोसे (Late Ram Bharose)",
+          "share_fraction": "1/1",
+          "residence": "नि० ग्राम Mohanlalganj",
+          "discrepancy_note": "Father name present in registry ledger but missing on physical scan"
+        }
+      ],
+      "verified_in_registry": true,
+      "has_deliberate_mismatch": true,
+      "mismatch_reason": "METADATA_OMISSION: Document scan omitted parent lineage recorded in Registry"
+    },
+    {
+      "registry_record_id": "REG-UP-REF-008",
+      "document_reference": "sample_08_missing_field.jpg",
+      "document_id": "SYNTH-UP-2026-008",
+      "notice": "Demo registry match - not an official government verification",
+      "state": "Uttar Pradesh",
+      "district": "Prayagraj (Synthetic)",
+      "tehsil": "Soraon (Synthetic)",
+      "pargana": "Mau (Synthetic)",
+      "village": "Sarai Inayat",
+      "fasli_year": "1430-1435",
+      "khata_number": "00095",
+      "khasra_numbers": [
+        "33/1"
+      ],
+      "land_area_hectares": 0.289,
+      "revenue_inr": 14.5,
+      "landholders": [
+        {
+          "name": "गीता देवी (Geeta Devi)",
+          "parent_name": "चंद्रभान (Chandrabhan)",
+          "share_fraction": "1/1",
+          "residence": "नि० ग्राम Sarai Inayat"
+        }
+      ],
+      "verified_in_registry": true,
+      "has_deliberate_mismatch": true,
+      "mismatch_reason": "METADATA_OMISSION: Document scan omitted revenue field (Registry has ₹14.50)"
+    },
+    {
+      "registry_record_id": "REG-UP-REF-009",
+      "document_reference": "sample_09_duplicate_original.pdf",
+      "document_id": "SYNTH-UP-2026-009",
+      "notice": "Demo registry match - not an official government verification",
+      "state": "Uttar Pradesh",
+      "district": "Sitapur (Synthetic)",
+      "tehsil": "Sidhauli (Synthetic)",
+      "pargana": "Bari (Synthetic)",
+      "village": "Belha",
+      "fasli_year": "1430-1435",
+      "khata_number": "00550",
+      "khasra_numbers": [
+        "188/5"
+      ],
+      "land_area_hectares": 0.72,
+      "revenue_inr": 31.0,
+      "landholders": [
+        {
+          "name": "सतीश चंद्र (Satish Chandra)",
+          "parent_name": "उमाकांत (Umakant)",
+          "share_fraction": "1/1",
+          "residence": "नि० ग्राम Belha"
+        }
+      ],
+      "verified_in_registry": true,
+      "has_deliberate_mismatch": false,
+      "mismatch_reason": null
+    },
+    {
+      "registry_record_id": "REG-UP-REF-010",
+      "document_reference": "sample_10_duplicate_copy.pdf",
+      "document_id": "SYNTH-UP-2026-010",
+      "notice": "Demo registry match - not an official government verification",
+      "state": "Uttar Pradesh",
+      "district": "Sitapur (Synthetic)",
+      "tehsil": "Sidhauli (Synthetic)",
+      "pargana": "Bari (Synthetic)",
+      "village": "Belha",
+      "fasli_year": "1430-1435",
+      "khata_number": "00550",
+      "khasra_numbers": [
+        "188/5"
+      ],
+      "land_area_hectares": 0.72,
+      "revenue_inr": 31.0,
+      "landholders": [
+        {
+          "name": "सतीश चंद्र (Satish Chandra)",
+          "parent_name": "उमाकांत (Umakant)",
+          "share_fraction": "1/1",
+          "residence": "नि० ग्राम Belha"
+        }
+      ],
+      "verified_in_registry": true,
+      "has_deliberate_mismatch": false,
+      "mismatch_reason": null
+    },
+    {
+      "registry_record_id": "REG-UP-REF-011",
+      "document_reference": "sample_11_wrong_khasra.pdf",
+      "document_id": "SYNTH-UP-2026-011",
+      "notice": "Demo registry match - not an official government verification",
+      "state": "Uttar Pradesh",
+      "district": "Varanasi (Synthetic)",
+      "tehsil": "Pindra (Synthetic)",
+      "pargana": "Kolaslah (Synthetic)",
+      "village": "Shivpur",
+      "fasli_year": "1430-1435",
+      "khata_number": "00619",
+      "khasra_numbers": [
+        "88/9"
+      ],
+      "land_area_hectares": 0.45,
+      "revenue_inr": 19.5,
+      "landholders": [
+        {
+          "name": "ब्रजेश कुमार त्रिपाठी (Brajesh Kumar Tripathi)",
+          "parent_name": "कमलापति त्रिपाठी (Kamlapati Tripathi)",
+          "share_fraction": "1/1",
+          "residence": "नि० ग्राम Shivpur"
+        }
+      ],
+      "verified_in_registry": true,
+      "has_deliberate_mismatch": true,
+      "mismatch_reason": "CRITICAL_MISMATCH: Document scan shows Khasra 999/INVALID whereas Official Registry records Khasra 88/9"
+    },
+    {
+      "registry_record_id": "REG-UP-REF-012",
+      "document_reference": "sample_12_co_tenants_clean.jpg",
+      "document_id": "SYNTH-UP-2026-012",
+      "notice": "Demo registry match - not an official government verification",
+      "state": "Uttar Pradesh",
+      "district": "Gorakhpur (Synthetic)",
+      "tehsil": "Sahjanwa (Synthetic)",
+      "pargana": "Hasanpur (Synthetic)",
+      "village": "Alinagar",
+      "fasli_year": "1430-1435",
+      "khata_number": "00334",
+      "khasra_numbers": [
+        "104/1",
+        "104/2"
+      ],
+      "land_area_hectares": 0.98,
+      "revenue_inr": 40.0,
+      "landholders": [
+        {
+          "name": "मनोज कुमार (Manoj Kumar)",
+          "parent_name": "बाबूलाल (Babulal)",
+          "share_fraction": "1/2",
+          "residence": "नि० ग्राम Alinagar"
+        },
+        {
+          "name": "विनोद कुमार (Vinod Kumar)",
+          "parent_name": "बाबूलाल (Babulal)",
+          "share_fraction": "1/2",
+          "residence": "नि० ग्राम Alinagar"
+        }
+      ],
+      "verified_in_registry": true,
+      "has_deliberate_mismatch": false,
+      "mismatch_reason": null
+    }
+  ]
+}
