@@ -2,9 +2,143 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  /* Brand & Core Colors */
+  --color-primary: #044eed;
+  --color-primary-hover: #0345d0;
+  --color-primary-active: #023aa8;
+  --color-primary-light: #eff6ff;
+  --color-brand-navy: #0b1a48;
+  --color-brand-dark: #061b6a;
+
+  /* Canvas & Surfaces */
+  --color-bg-canvas: #f8fafc;
+  --color-bg-card: #ffffff;
+  --color-bg-sidebar: #ffffff;
+  --color-border: #e2e8f0;
+  --color-border-subtle: #f1f5f9;
+
+  /* Typography Colors */
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #475569;
+  --color-text-muted: #64748b;
+  --color-text-light: #94a3b8;
+
+  /* Status Chip Tokens from 14.png */
+  --status-uploaded-bg: #f1f5f9;
+  --status-uploaded-text: #475569;
+  --status-uploaded-dot: #64748b;
+
+  --status-processing-bg: #e5f1ff;
+  --status-processing-text: #1d4ed8;
+  --status-processing-dot: #2563eb;
+
+  --status-needs-review-bg: #fef8e2;
+  --status-needs-review-text: #92400e;
+  --status-needs-review-dot: #d97706;
+
+  --status-mismatch-bg: #feecec;
+  --status-mismatch-text: #991b1b;
+  --status-mismatch-dot: #dc2626;
+
+  --status-approved-bg: #e4f8ef;
+  --status-approved-text: #166534;
+  --status-approved-dot: #16a34a;
+
+  --status-rejected-bg: #feecec;
+  --status-rejected-text: #991b1b;
+  --status-rejected-dot: #dc2626;
+
+  --status-failed-bg: #feecec;
+  --status-failed-text: #991b1b;
+  --status-failed-dot: #dc2626;
+
+  /* Confidence Chip Tokens from 14.png */
+  --confidence-high-bg: #e4f8ef;
+  --confidence-high-text: #166534;
+  --confidence-high-dot: #16a34a;
+
+  --confidence-medium-bg: #fef8e2;
+  --confidence-medium-text: #92400e;
+  --confidence-medium-dot: #d97706;
+
+  --confidence-low-bg: #feecec;
+  --confidence-low-text: #991b1b;
+  --confidence-low-dot: #dc2626;
+
+  /* Button Variants Tokens from 14.png */
+  --btn-primary-bg: #044eed;
+  --btn-primary-text: #ffffff;
+  --btn-primary-hover: #0345d0;
+
+  --btn-secondary-bg: #ffffff;
+  --btn-secondary-border: #044eed;
+  --btn-secondary-text: #044eed;
+  --btn-secondary-hover: #eff6ff;
+
+  --btn-danger-bg: #dc2626;
+  --btn-danger-text: #ffffff;
+  --btn-danger-hover: #b91c1c;
+
+  --btn-ghost-bg: #ffffff;
+  --btn-ghost-border: #e2e8f0;
+  --btn-ghost-text: #1e293b;
+  --btn-ghost-hover: #f8fafc;
+
+  /* Form Input Tokens from 14.png */
+  --input-bg: #ffffff;
+  --input-border: #d1d5db;
+  --input-border-focus: #044eed;
+  --input-ring-focus: rgba(4, 78, 237, 0.15);
+  --input-border-error: #dc2626;
+  --input-ring-error: rgba(220, 38, 38, 0.15);
+  --input-disabled-bg: #f8fafc;
+  --input-disabled-border: #e2e8f0;
+  --input-disabled-text: #94a3b8;
+
+  /* Toast Tokens from 14.png */
+  --toast-success-bg: #e8f8ee;
+  --toast-success-border: #bbf7d0;
+  --toast-error-bg: #feecec;
+  --toast-error-border: #fecaca;
+  --toast-warning-bg: #fef8e2;
+  --toast-warning-border: #fef08a;
+
+  /* Border Radii */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
+  --radius-full: 9999px;
+
+  /* Font Sizes */
+  --font-xs: 0.75rem;
+  --font-sm: 0.875rem;
+  --font-base: 1rem;
+  --font-lg: 1.125rem;
+  --font-xl: 1.25rem;
+  --font-2xl: 1.5rem;
+
+  /* Spacing */
+  --sidebar-width: 240px;
+}
+
 @layer base {
+  * {
+    box-sizing: border-box;
+  }
+
   body {
-    @apply bg-slate-950 text-slate-100 font-sans antialiased min-h-screen selection:bg-emerald-500 selection:text-white;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: var(--color-bg-canvas);
+    color: var(--color-text-primary);
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  :focus-visible {
+    outline: 2px solid #044eed;
+    outline-offset: 2px;
   }
 }

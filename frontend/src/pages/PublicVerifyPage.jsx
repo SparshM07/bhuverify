@@ -1,25 +1,25 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { publicVerifyAPI } from '../services/api';
 import {
-  ShieldCheck,
-  ShieldAlert,
+  Check,
   Clock,
-  CheckCircle2,
+  Ban,
   AlertOctagon,
-  FileText,
-  Calendar,
-  Layers,
-  ExternalLink,
-  Lock,
-  ArrowRight
+  Info,
+  X,
+  FileCheck2,
+  Database,
+  UserCheck
 } from 'lucide-react';
+import StatusChip from '../components/ui/StatusChip';
 
 export default function PublicVerifyPage() {
   const { token } = useParams();
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(true);
   const [errorStatus, setErrorStatus] = useState(null);
+  const [showHowItWorks, setShowHowItWorks] = useState(false);
 
   useEffect(() => {
     if (token) {
@@ -50,173 +50,342 @@ export default function PublicVerifyPage() {
     if (!isoString) return '-';
     try {
       const d = new Date(isoString);
-      return d.toLocaleDateString('en-IN', {
-        day: '2-digit',
+      return d.toLocaleDateString('en-GB', {
+        day: 'numeric',
         month: 'short',
         year: 'numeric',
         hour: '2-digit',
         minute: '2-digit',
+        hour12: true,
       });
     } catch {
       return isoString;
     }
   };
 
-  return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col justify-between p-4 sm:p-6 lg:p-8">
-      {/* Top Header */}
-      <header className="max-w-3xl mx-auto w-full flex items-center justify-between pb-6 border-b border-slate-800">
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-500 flex items-center justify-center text-white font-bold shadow-lg shadow-emerald-500/20">
-            <ShieldCheck className="w-6 h-6" />
-          </div>
-          <div>
-            <h1 className="text-lg font-bold text-white tracking-tight">BhuVerify Public Registry</h1>
-            <p className="text-xs text-slate-400">Department of Revenue & Land Records Verification</p>
-          </div>
-        </div>
-        <div className="text-[11px] font-mono px-2.5 py-1 rounded bg-slate-900 text-slate-400 border border-slate-800">
-          SECURE PROTOCOL
-        </div>
-      </header>
+  // Determine variant
+  const isRevoked = result?.status === 'revoked';
+  const isExpired = result?.status === 'expired';
+  const isInvalid = errorStatus === 404 || (!loading && !result);
+  const isRateLimited = errorStatus === 429;
+  const isGenericError = errorStatus && errorStatus !== 404 && errorStatus !== 429;
+  const isValid = !loading && result && !isRevoked && !isExpired;
 
-      {/* Main Content Card */}
-      <main className="max-w-2xl mx-auto w-full my-8">
+  return (
+    <div className="min-h-screen bg-[#eff3fe] sm:bg-[#f1f5f9] flex flex-col items-center justify-center p-3.5 sm:p-6 antialiased font-sans">
+      {/* Brand Header matching 11.png */}
+      <div className="text-center mb-4">
+        <h1 className="text-xl font-bold tracking-tight text-[#061b6a]">
+          BhuVerify
+        </h1>
+        <p className="text-xs text-slate-500 font-normal mt-0.5">
+          Land record verification
+        </p>
+      </div>
+
+      {/* Single Centered Verification Card matching 11.png (responsive at 390px) */}
+      <div className="w-full max-w-[390px] bg-white rounded-2xl border border-slate-200/90 shadow-sm p-4 text-slate-900 transition-all">
         {loading ? (
-          <div className="p-12 rounded-3xl bg-slate-900/90 border border-slate-800 text-center space-y-4 shadow-xl">
-            <div className="w-10 h-10 border-2 border-emerald-500/20 border-t-emerald-500 rounded-full animate-spin mx-auto" />
-            <div className="text-sm font-medium text-slate-300">Validating Cryptographic Share Token...</div>
-            <p className="text-xs text-slate-500">Checking revocation registry and ledger signatures.</p>
+          <div className="py-12 text-center space-y-3">
+            <div className="w-10 h-10 border-3 border-blue-600/20 border-t-[#044eed] rounded-full animate-spin mx-auto" />
+            <p className="text-xs font-medium text-slate-600">Verifying security token...</p>
           </div>
-        ) : errorStatus === 429 ? (
-          <div className="p-8 rounded-3xl bg-amber-500/10 border border-amber-500/30 text-center space-y-4 shadow-xl">
-            <Clock className="w-12 h-12 text-amber-400 mx-auto" />
-            <h2 className="text-xl font-bold text-white">Rate Limit Exceeded</h2>
-            <p className="text-xs text-slate-300 max-w-md mx-auto leading-relaxed">
-              Too many verification requests received from this address. Please wait 60 seconds before checking again.
-            </p>
+        ) : isRevoked ? (
+          /* =================================================================== */
+          /* VARIANT 3: LINK REVOKED (Zero document details shown)               */
+          /* =================================================================== */
+          <div className="space-y-4">
+            <div className="bg-[#feecec] rounded-xl p-5 text-center">
+              <div className="w-14 h-14 bg-[#fed7d7] rounded-full mx-auto flex items-center justify-center mb-3 text-[#dc2626]">
+                <Ban className="w-7 h-7 stroke-[2.2]" />
+              </div>
+              <h2 className="text-lg font-bold text-[#991b1b]">
+                Link revoked
+              </h2>
+              <p className="text-xs text-[#991b1b]/85 mt-1 leading-snug">
+                This verification link has been revoked and is no longer available.
+              </p>
+            </div>
+
+            <div className="text-center text-xs text-slate-500 py-4 px-2 leading-relaxed">
+              The link may have been revoked by the authorised user.
+            </div>
+
+            {/* Bordered Demo Notice */}
+            <div className="bg-[#fffbeb] border border-[#fef08a] rounded-xl p-3.5 flex items-start gap-2.5 text-left">
+              <Info className="w-4 h-4 text-[#a16207] shrink-0 mt-0.5" />
+              <div>
+                <p className="font-semibold text-xs text-[#854d0e] leading-snug">
+                  This is a demonstration.
+                </p>
+                <p className="font-semibold text-xs text-[#854d0e] leading-snug mb-1">
+                  Not an official government verification.
+                </p>
+                <p className="text-[11px] leading-relaxed text-[#a16207]">
+                  This is a demo system with synthetic data and should not be used as proof of ownership or for any legal purpose.
+                </p>
+              </div>
+            </div>
           </div>
-        ) : errorStatus === 404 || !result ? (
-          <div className="p-8 rounded-3xl bg-rose-500/10 border border-rose-500/30 text-center space-y-4 shadow-xl">
-            <AlertOctagon className="w-12 h-12 text-rose-400 mx-auto" />
-            <h2 className="text-xl font-bold text-white">Invalid Verification Token</h2>
-            <p className="text-xs text-slate-300 max-w-md mx-auto leading-relaxed">
-              This verification token was not recognized in the departmental registry. The link or QR code may be corrupted or forged.
-            </p>
+        ) : isExpired ? (
+          /* =================================================================== */
+          /* VARIANT 2: LINK EXPIRED (Zero document details shown)               */
+          /* =================================================================== */
+          <div className="space-y-4">
+            <div className="bg-[#feecec] rounded-xl p-5 text-center">
+              <div className="w-14 h-14 bg-[#fed7d7] rounded-full mx-auto flex items-center justify-center mb-3 text-[#dc2626]">
+                <Clock className="w-7 h-7 stroke-[2.2]" />
+              </div>
+              <h2 className="text-lg font-bold text-[#991b1b]">
+                Link expired
+              </h2>
+              <p className="text-xs text-[#991b1b]/85 mt-1 leading-snug">
+                This verification link has expired and is no longer available.
+              </p>
+            </div>
+
+            <div className="text-center text-xs text-slate-500 py-4 px-2 leading-relaxed">
+              For security reasons, verification links are valid only for a limited time.
+            </div>
+
+            {/* Bordered Demo Notice */}
+            <div className="bg-[#fffbeb] border border-[#fef08a] rounded-xl p-3.5 flex items-start gap-2.5 text-left">
+              <Info className="w-4 h-4 text-[#a16207] shrink-0 mt-0.5" />
+              <div>
+                <p className="font-semibold text-xs text-[#854d0e] leading-snug">
+                  This is a demonstration.
+                </p>
+                <p className="font-semibold text-xs text-[#854d0e] leading-snug mb-1">
+                  Not an official government verification.
+                </p>
+                <p className="text-[11px] leading-relaxed text-[#a16207]">
+                  This is a demo system with synthetic data and should not be used as proof of ownership or for any legal purpose.
+                </p>
+              </div>
+            </div>
           </div>
-        ) : result.status === 'revoked' ? (
-          /* REVOKED TOKEN STATE: Shows ONLY Revoked Status (Zero PII / details leaked) */
-          <div className="p-8 rounded-3xl bg-rose-500/10 border border-rose-500/30 text-center space-y-4 shadow-xl">
-            <div className="w-16 h-16 rounded-2xl bg-rose-500/20 border border-rose-500/30 flex items-center justify-center text-rose-400 mx-auto">
-              <ShieldAlert className="w-8 h-8" />
+        ) : isRateLimited ? (
+          /* RATE LIMIT VARIANT */
+          <div className="space-y-4">
+            <div className="bg-amber-50 rounded-xl p-5 text-center">
+              <div className="w-14 h-14 bg-amber-100 rounded-full mx-auto flex items-center justify-center mb-3 text-amber-600">
+                <Clock className="w-7 h-7 stroke-[2.2]" />
+              </div>
+              <h2 className="text-lg font-bold text-amber-900">
+                Rate limit reached
+              </h2>
+              <p className="text-xs text-amber-800/85 mt-1 leading-snug">
+                Too many requests. Please wait 60 seconds before checking again.
+              </p>
             </div>
-            <div className="inline-flex px-3 py-1 rounded-full text-xs font-semibold bg-rose-500/20 text-rose-300 border border-rose-500/30 uppercase tracking-wider font-mono">
-              Status: Revoked
-            </div>
-            <h2 className="text-2xl font-bold text-white">Share Token Revoked</h2>
-            <p className="text-xs text-slate-300 max-w-md mx-auto leading-relaxed">
-              This public verification share token was officially revoked by departmental reviewers. The underlying record cannot be verified through this link.
-            </p>
-            <div className="pt-2 text-[11px] text-slate-500 font-mono">
-              {result.disclaimer}
+
+            <div className="bg-[#fffbeb] border border-[#fef08a] rounded-xl p-3.5 flex items-start gap-2.5 text-left">
+              <Info className="w-4 h-4 text-[#a16207] shrink-0 mt-0.5" />
+              <div>
+                <p className="font-semibold text-xs text-[#854d0e] leading-snug">
+                  This is a demonstration.
+                </p>
+                <p className="text-[11px] leading-relaxed text-[#a16207]">
+                  Public token lookups are rate-limited to preserve service availability.
+                </p>
+              </div>
             </div>
           </div>
-        ) : result.status === 'expired' ? (
-          /* EXPIRED TOKEN STATE: Shows ONLY Expired Status (Zero PII / details leaked) */
-          <div className="p-8 rounded-3xl bg-amber-500/10 border border-amber-500/30 text-center space-y-4 shadow-xl">
-            <div className="w-16 h-16 rounded-2xl bg-amber-500/20 border border-amber-500/30 flex items-center justify-center text-amber-400 mx-auto">
-              <Clock className="w-8 h-8" />
+        ) : isInvalid || isGenericError ? (
+          /* INVALID / 404 VARIANT */
+          <div className="space-y-4">
+            <div className="bg-[#feecec] rounded-xl p-5 text-center">
+              <div className="w-14 h-14 bg-[#fed7d7] rounded-full mx-auto flex items-center justify-center mb-3 text-[#dc2626]">
+                <AlertOctagon className="w-7 h-7 stroke-[2.2]" />
+              </div>
+              <h2 className="text-lg font-bold text-[#991b1b]">
+                Invalid verification link
+              </h2>
+              <p className="text-xs text-[#991b1b]/85 mt-1 leading-snug">
+                This verification link was not recognized or is no longer valid.
+              </p>
             </div>
-            <div className="inline-flex px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/30 uppercase tracking-wider font-mono">
-              Status: Expired
+
+            <div className="text-center text-xs text-slate-500 py-4 px-2 leading-relaxed">
+              The link or QR code may be corrupted, expired, or the document was revoked.
             </div>
-            <h2 className="text-2xl font-bold text-white">Share Token Expired</h2>
-            <p className="text-xs text-slate-300 max-w-md mx-auto leading-relaxed">
-              This public verification share token has expired after its designated retention window. Please request an updated QR code or verification link.
-            </p>
-            <div className="pt-2 text-[11px] text-slate-500 font-mono">
-              {result.disclaimer}
+
+            <div className="bg-[#fffbeb] border border-[#fef08a] rounded-xl p-3.5 flex items-start gap-2.5 text-left">
+              <Info className="w-4 h-4 text-[#a16207] shrink-0 mt-0.5" />
+              <div>
+                <p className="font-semibold text-xs text-[#854d0e] leading-snug">
+                  This is a demonstration.
+                </p>
+                <p className="font-semibold text-xs text-[#854d0e] leading-snug mb-1">
+                  Not an official government verification.
+                </p>
+                <p className="text-[11px] leading-relaxed text-[#a16207]">
+                  This is a demo system with synthetic data and should not be used as proof of ownership or for any legal purpose.
+                </p>
+              </div>
             </div>
           </div>
         ) : (
-          /* VALID APPROVED VERIFICATION STATE */
-          <div className="p-8 rounded-3xl bg-slate-900/90 border border-slate-800 space-y-6 shadow-2xl">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-800">
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-2xl bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center text-emerald-400 shadow-md shadow-emerald-500/10">
-                  <CheckCircle2 className="w-6 h-6" />
-                </div>
-                <div>
-                  <div className="flex items-center gap-2">
-                    <h2 className="text-xl font-bold text-white tracking-tight">Record Verified</h2>
-                    <span className="px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-mono">
-                      OFFICIAL REVIEW COMPLETED
-                    </span>
-                  </div>
-                  <p className="text-xs text-slate-400 mt-0.5">Authenticity confirmed via cryptographic checksum and clerk approval.</p>
-                </div>
+          /* =================================================================== */
+          /* VARIANT 1: REVIEWED AND APPROVED (Minimal details, ZERO PII)        */
+          /* =================================================================== */
+          <div className="space-y-3.5">
+            {/* Status Block matching 11.png */}
+            <div className="bg-[#eef9f2] rounded-xl p-5 text-center">
+              <div className="w-14 h-14 bg-[#c8eed5] rounded-full mx-auto flex items-center justify-center mb-3 text-[#16a34a]">
+                <Check className="w-7 h-7 stroke-[2.8]" />
               </div>
-            </div>
-
-            {/* Sanitized Minimal Metadata Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="p-4 rounded-2xl bg-slate-950 border border-slate-800 space-y-1">
-                <span className="text-[11px] uppercase tracking-wider text-slate-400 font-medium">Document Reference</span>
-                <div className="text-sm font-semibold text-white truncate font-mono">
-                  {result.document_reference || 'Khatauni Record Specimen'}
-                </div>
-              </div>
-
-              <div className="p-4 rounded-2xl bg-slate-950 border border-slate-800 space-y-1">
-                <span className="text-[11px] uppercase tracking-wider text-slate-400 font-medium">Review Status</span>
-                <div className="text-sm font-semibold text-emerald-400 capitalize flex items-center gap-1.5">
-                  <CheckCircle2 className="w-4 h-4" />
-                  {result.review_status || 'Approved'}
-                </div>
-              </div>
-
-              <div className="p-4 rounded-2xl bg-slate-950 border border-slate-800 space-y-1">
-                <span className="text-[11px] uppercase tracking-wider text-slate-400 font-medium">Ingestion Timestamp</span>
-                <div className="text-xs font-mono text-slate-300">
-                  {formatDate(result.upload_date)}
-                </div>
-              </div>
-
-              <div className="p-4 rounded-2xl bg-slate-950 border border-slate-800 space-y-1">
-                <span className="text-[11px] uppercase tracking-wider text-slate-400 font-medium">Cryptographic Integrity</span>
-                <div className="text-xs font-semibold text-emerald-400 flex items-center gap-1.5">
-                  <Lock className="w-3.5 h-3.5" />
-                  {result.integrity_status || 'Verified Intact'}
-                </div>
-              </div>
-            </div>
-
-            {/* Verification Method & Live Verification Timestamp */}
-            <div className="p-4 rounded-2xl bg-slate-950 border border-slate-800 space-y-2">
-              <div className="flex items-center justify-between text-xs">
-                <span className="text-slate-400 font-medium">Verification Method:</span>
-                <span className="text-slate-200 font-mono text-right">{result.verification_method}</span>
-              </div>
-              <div className="flex items-center justify-between text-xs pt-1 border-t border-slate-800/60">
-                <span className="text-slate-400 font-medium">Checked At:</span>
-                <span className="text-emerald-400 font-mono">{formatDate(result.last_checked_time)}</span>
-              </div>
-            </div>
-
-            {/* Disclaimer Banner */}
-            <div className="p-3 rounded-xl bg-slate-950 text-center border border-slate-800/80">
-              <p className="text-[11px] text-amber-300/80 font-mono">
-                {result.disclaimer || 'Demo registry match - not an official government verification'}
+              <h2 className="text-lg font-bold text-[#166534]">
+                Reviewed and approved
+              </h2>
+              <p className="text-xs text-[#166534]/85 mt-1 leading-snug">
+                This land record has been reviewed and verified in the BhuVerify system.
               </p>
+            </div>
+
+            {/* Minimal Details List matching 11.png (Zero Personal Data) */}
+            <div className="divide-y divide-slate-100 text-xs">
+              <div className="py-2.5 flex items-center justify-between">
+                <span className="text-slate-500">Document reference</span>
+                <span className="font-semibold text-slate-900 font-mono">
+                  {result.document_reference || 'BV-2026-000129'}
+                </span>
+              </div>
+
+              <div className="py-2.5 flex items-center justify-between">
+                <span className="text-slate-500">Upload date</span>
+                <span className="text-slate-700 font-medium">
+                  {formatDate(result.upload_date)}
+                </span>
+              </div>
+
+              <div className="py-2.5 flex items-center justify-between">
+                <span className="text-slate-500">Review status</span>
+                <StatusChip status={result.review_status || 'approved'} />
+              </div>
+
+              <div className="py-2.5 flex items-center justify-between">
+                <span className="text-slate-500">Verification method</span>
+                <span className="text-slate-700 font-medium">Demo registry</span>
+              </div>
+
+              <div className="py-2.5 flex items-center justify-between">
+                <span className="text-slate-500">File integrity</span>
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-[#eef9f2] text-[#166534] border border-[#c8eed5]">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#16a34a]" />
+                  Unchanged
+                </span>
+              </div>
+
+              <div className="py-2.5 flex items-center justify-between">
+                <span className="text-slate-500">Last checked</span>
+                <span className="text-slate-700 font-medium">
+                  {formatDate(result.last_checked_time)}
+                </span>
+              </div>
+            </div>
+
+            {/* Bordered Demo Notice Box matching 11.png */}
+            <div className="bg-[#fffbeb] border border-[#fef08a] rounded-xl p-3.5 flex items-start gap-2.5 text-left mt-3">
+              <Info className="w-4 h-4 text-[#a16207] shrink-0 mt-0.5" />
+              <div>
+                <p className="font-semibold text-xs text-[#854d0e] leading-snug">
+                  This is a demonstration.
+                </p>
+                <p className="font-semibold text-xs text-[#854d0e] leading-snug mb-1">
+                  Not an official government verification.
+                </p>
+                <p className="text-[11px] leading-relaxed text-[#a16207]">
+                  This record is part of a demo system with synthetic data and should not be used as proof of ownership or for any legal purpose.
+                </p>
+              </div>
             </div>
           </div>
         )}
-      </main>
+      </div>
 
-      {/* Footer */}
-      <footer className="max-w-3xl mx-auto w-full pt-6 border-t border-slate-800 text-center text-xs text-slate-500">
-        <p>© 2026 BhuVerify Prototype • Secure State Cadastral Verification System</p>
-      </footer>
+      {/* "How verification works →" Link matching 11.png */}
+      <div className="text-center mt-4">
+        <button
+          type="button"
+          onClick={() => setShowHowItWorks(true)}
+          className="text-xs font-medium text-[#044eed] hover:underline inline-flex items-center gap-1 transition cursor-pointer"
+        >
+          How verification works &rarr;
+        </button>
+      </div>
+
+      {/* Informational Modal: How Verification Works */}
+      {showHowItWorks && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs animate-fade-in">
+          <div className="w-full max-w-sm rounded-2xl bg-white border border-slate-200 p-5 shadow-xl space-y-4 text-left">
+            <div className="flex items-center justify-between pb-3 border-b border-slate-100">
+              <h3 className="text-sm font-bold text-slate-900">
+                How Verification Works
+              </h3>
+              <button
+                type="button"
+                onClick={() => setShowHowItWorks(false)}
+                className="text-slate-400 hover:text-slate-700 p-1 rounded-lg hover:bg-slate-100 transition"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+
+            <p className="text-xs text-slate-600 leading-relaxed">
+              BhuVerify uses a multi-layered verification protocol to confirm document integrity without exposing confidential owner information:
+            </p>
+
+            <div className="space-y-3 text-xs">
+              <div className="flex items-start gap-2.5">
+                <div className="w-6 h-6 rounded-lg bg-blue-50 text-[#044eed] flex items-center justify-center shrink-0 mt-0.5">
+                  <FileCheck2 className="w-3.5 h-3.5" />
+                </div>
+                <div>
+                  <strong className="text-slate-800 block">1. File Integrity</strong>
+                  <span className="text-slate-500 text-[11px] leading-relaxed">
+                    A cryptographic SHA-256 checksum guarantees the digital document is authentic and unmodified.
+                  </span>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-2.5">
+                <div className="w-6 h-6 rounded-lg bg-emerald-50 text-[#16a34a] flex items-center justify-center shrink-0 mt-0.5">
+                  <Database className="w-3.5 h-3.5" />
+                </div>
+                <div>
+                  <strong className="text-slate-800 block">2. Demo Registry Match</strong>
+                  <span className="text-slate-500 text-[11px] leading-relaxed">
+                    Extracted attributes are validated against simulated land revenue registry datasets.
+                  </span>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-2.5">
+                <div className="w-6 h-6 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center shrink-0 mt-0.5">
+                  <UserCheck className="w-3.5 h-3.5" />
+                </div>
+                <div>
+                  <strong className="text-slate-800 block">3. Authorized Reviewer Signoff</strong>
+                  <span className="text-slate-500 text-[11px] leading-relaxed">
+                    Official verification decisions are signed by authorized Tehsil reviewers before public token issuance.
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div className="pt-2 border-t border-slate-100 flex justify-end">
+              <button
+                type="button"
+                onClick={() => setShowHowItWorks(false)}
+                className="px-4 py-1.5 rounded-lg bg-[#044eed] hover:bg-blue-700 text-white text-xs font-medium transition"
+              >
+                Got it
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -2,35 +2,33 @@ import React, { useState, useRef } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { documentAPI } from '../services/api';
 import {
+  Button,
+  Card,
+  Tooltip,
+} from '../components/ui';
+import {
   UploadCloud,
   FileText,
   AlertTriangle,
   CheckCircle2,
   AlertCircle,
   X,
-  FileCheck,
-  ShieldAlert,
+  Check,
   ArrowRight,
-  Lock,
-  Layers,
-  MapPin,
   ExternalLink,
-  Info
+  Info,
+  Clock,
+  Briefcase,
+  Languages,
 } from 'lucide-react';
 
 const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10 MB
-
-const ALLOWED_MIME_TYPES = [
-  'application/pdf',
-  'image/jpeg',
-  'image/png'
-];
 
 export default function UploadPage() {
   const [file, setFile] = useState(null);
   const [recordType, setRecordType] = useState('Khatauni (ROR - Record of Rights)');
   const [district, setDistrict] = useState('Lucknow (Synthetic)');
-  const [tehsil, setTehsil] = useState('Bakshi Ka Talab (Synthetic)');
+  const [tehsil, setTehsil] = useState('Bakshi Ka Talab');
   const [village, setVillage] = useState('Syntheticpur');
   const [isRestricted, setIsRestricted] = useState(false);
 
@@ -53,18 +51,25 @@ export default function UploadPage() {
 
     if (!selectedFile) return false;
 
-    // Check size limit
+    // Check size limit (10MB)
     if (selectedFile.size > MAX_FILE_SIZE) {
-      setValidationError(`File exceeds maximum allowed size of 10 MB (Selected: ${(selectedFile.size / (1024 * 1024)).toFixed(2)} MB).`);
+      setValidationError(
+        `File exceeds maximum allowed size of 10 MB (Selected: ${(
+          selectedFile.size /
+          (1024 * 1024)
+        ).toFixed(2)} MB).`
+      );
       return false;
     }
 
-    // Check extension & basic MIME
+    // Check extension
     const extension = selectedFile.name.split('.').pop()?.toLowerCase();
     const validExtensions = ['pdf', 'jpg', 'jpeg', 'png'];
 
     if (!validExtensions.includes(extension)) {
-      setValidationError('Invalid file format. Only PDF, JPG, and PNG files are accepted.');
+      setValidationError(
+        'Invalid file format. Only PDF, JPG, and PNG files are accepted.'
+      );
       return false;
     }
 
@@ -109,7 +114,7 @@ export default function UploadPage() {
     }
 
     setIsUploading(true);
-    setUploadProgress(10);
+    setUploadProgress(15);
     setValidationError('');
     setDuplicateWarning(null);
     setUploadSuccess(null);
@@ -134,17 +139,25 @@ export default function UploadPage() {
         const detail = err.response.data.detail;
         setDuplicateWarning({
           warning: detail.warning || 'Duplicate document detected.',
-          message: detail.message || 'A document with the exact same SHA-256 hash has already been registered.',
+          message:
+            detail.message ||
+            'A document with the exact same SHA-256 hash has already been registered in the system.',
           existingId: detail.existing_document_id,
           hash: detail.sha256_hash,
-          disclaimer: detail.disclaimer
+          disclaimer: detail.disclaimer,
         });
       } else if (err.response && err.response.status === 413) {
         setValidationError('File exceeds the 10 MB maximum upload limit.');
       } else if (err.response && err.response.status === 400) {
-        setValidationError(err.response.data.detail || 'Invalid file content. Must be a valid PDF, JPG, or PNG.');
+        setValidationError(
+          err.response.data.detail ||
+            'Invalid file content. Must be a valid PDF, JPG, or PNG.'
+        );
       } else {
-        setValidationError(err.response?.data?.detail || 'An unexpected error occurred during upload. Please try again.');
+        setValidationError(
+          err.response?.data?.detail ||
+            'An unexpected error occurred during upload. Please try again.'
+        );
       }
     } finally {
       setIsUploading(false);
@@ -163,321 +176,533 @@ export default function UploadPage() {
   };
 
   return (
-    <div className="space-y-6 max-w-4xl mx-auto">
-      {/* Page Header */}
-      <div>
-        <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono mb-2">
-          <UploadCloud className="w-3.5 h-3.5" /> Departmental Ingestion Portal
-        </div>
-        <h1 className="text-2xl font-bold text-white tracking-tight">Upload Land Record</h1>
-        <p className="text-sm text-slate-400 mt-1">
-          Ingest Uttar Pradesh Khatauni or Khasra scans. Binary magic bytes are validated, SHA-256 hash is computed, and an append-only audit event is recorded.
+    <div className="space-y-6 max-w-5xl mx-auto pb-16 antialiased font-sans">
+      {/* =================================================================== */}
+      {/* PAGE HEADER matching 3.png                                          */}
+      {/* =================================================================== */}
+      <div className="pb-2">
+        <h1 className="text-2xl font-bold text-slate-900 tracking-tight">
+          Upload record
+        </h1>
+        <p className="text-xs text-slate-500 mt-1">
+          Upload a scanned land record (khatauni) to extract fields using OCR.
         </p>
       </div>
 
-      {/* Duplicate Warning Display */}
+      {/* =================================================================== */}
+      {/* WORKFLOW STEP INDICATOR                                             */}
+      {/* =================================================================== */}
+      <div className="flex items-center justify-between max-w-xl mx-auto px-5 py-3 bg-white rounded-xl border border-slate-200/80 shadow-2xs">
+        <div className="flex items-center gap-2.5">
+          <div
+            className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold shadow-xs transition-colors ${
+              uploadSuccess
+                ? 'bg-[#16a34a] text-white'
+                : 'bg-[#044eed] text-white'
+            }`}
+          >
+            {uploadSuccess ? <Check className="w-4 h-4 stroke-[2.5]" /> : '1'}
+          </div>
+          <div>
+            <div className="text-xs font-bold text-slate-900 leading-tight">
+              Upload record
+            </div>
+            <div
+              className={`text-[10px] font-medium ${
+                uploadSuccess ? 'text-emerald-600' : 'text-[#044eed]'
+              }`}
+            >
+              {uploadSuccess ? 'Completed' : isUploading ? 'Uploading...' : 'Current step'}
+            </div>
+          </div>
+        </div>
+
+        <div
+          className={`h-0.5 flex-1 mx-4 rounded transition-colors ${
+            uploadSuccess ? 'bg-emerald-300' : 'bg-slate-200'
+          }`}
+        />
+
+        <div className={`flex items-center gap-2.5 ${uploadSuccess ? '' : 'opacity-60'}`}>
+          <div
+            className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-semibold ${
+              uploadSuccess
+                ? 'bg-[#044eed] text-white'
+                : 'bg-slate-100 border border-slate-300 text-slate-500'
+            }`}
+          >
+            2
+          </div>
+          <div>
+            <div className="text-xs font-medium text-slate-700 leading-tight">
+              OCR extraction
+            </div>
+            <div className="text-[10px] text-slate-400">Next step</div>
+          </div>
+        </div>
+
+        <div className="h-0.5 flex-1 mx-4 bg-slate-200 rounded" />
+
+        <div className="flex items-center gap-2.5 opacity-60">
+          <div className="w-7 h-7 rounded-full bg-slate-100 border border-slate-300 text-slate-500 flex items-center justify-center text-xs font-semibold">
+            3
+          </div>
+          <div>
+            <div className="text-xs font-medium text-slate-700 leading-tight">
+              Review & verify
+            </div>
+            <div className="text-[10px] text-slate-400">Final step</div>
+          </div>
+        </div>
+      </div>
+
+      {/* =================================================================== */}
+      {/* DUPLICATE-FILE WARNING AREA matching user requirement               */}
+      {/* =================================================================== */}
       {duplicateWarning && (
-        <div className="p-5 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-300 space-y-3">
+        <div className="p-4 rounded-xl bg-amber-50 border border-amber-200 text-amber-900 space-y-3 animate-fade-in shadow-2xs">
           <div className="flex items-start gap-3">
-            <AlertTriangle className="w-6 h-6 text-amber-400 shrink-0 mt-0.5" />
+            <AlertTriangle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
             <div className="space-y-1 flex-1">
-              <h3 className="text-base font-semibold text-amber-200">
+              <h4 className="text-sm font-bold text-amber-900">
                 {duplicateWarning.warning}
-              </h3>
-              <p className="text-xs text-amber-300/90 leading-relaxed">
+              </h4>
+              <p className="text-xs text-amber-800 leading-relaxed">
                 {duplicateWarning.message}
               </p>
-              <div className="pt-2 text-xs font-mono text-amber-400/90">
+              <div className="text-xs font-mono text-amber-800/90 pt-1">
                 Matched SHA-256 Hash:{' '}
-                <span className="bg-amber-950/60 px-2 py-0.5 rounded border border-amber-500/20 break-all select-all">
+                <span className="bg-white px-2 py-0.5 rounded border border-amber-200 break-all select-all font-semibold text-slate-900">
                   {duplicateWarning.hash}
                 </span>
               </div>
             </div>
           </div>
-          <div className="pt-2 flex flex-wrap items-center gap-3">
-            <Link
-              to={`/documents/${duplicateWarning.existingId}`}
-              className="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-semibold text-xs flex items-center gap-1.5 transition-colors"
-            >
-              <ExternalLink className="w-3.5 h-3.5" /> View Existing Registered Document ({duplicateWarning.existingId.slice(0, 8)}...)
+          <div className="pt-1 flex flex-wrap items-center gap-2.5">
+            <Link to={`/documents/${duplicateWarning.existingId}`}>
+              <Button
+                variant="secondary"
+                size="sm"
+                icon={<ExternalLink className="w-3.5 h-3.5" />}
+              >
+                View Existing Registered Document ({duplicateWarning.existingId.slice(0, 8)}...)
+              </Button>
             </Link>
-            <button
-              onClick={resetForm}
-              className="px-3 py-2 rounded-xl bg-amber-950/40 hover:bg-amber-900/40 text-amber-300 text-xs font-medium border border-amber-500/20"
-            >
+            <Button variant="ghost" size="sm" onClick={resetForm}>
               Upload Different File
-            </button>
+            </Button>
           </div>
         </div>
       )}
 
-      {/* Upload Success Alert */}
+      {/* =================================================================== */}
+      {/* UPLOAD SUCCESS ALERT                                                */}
+      {/* =================================================================== */}
       {uploadSuccess && (
-        <div className="p-5 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 space-y-3">
+        <div className="p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900 space-y-3 animate-fade-in shadow-2xs">
           <div className="flex items-start gap-3">
-            <CheckCircle2 className="w-6 h-6 text-emerald-400 shrink-0 mt-0.5" />
+            <CheckCircle2 className="w-5 h-5 text-[#16a34a] shrink-0 mt-0.5" />
             <div className="space-y-1 flex-1">
-              <h3 className="text-base font-semibold text-emerald-200">
+              <h4 className="text-sm font-bold text-emerald-900">
                 Document Ingested & Verified Successfully!
-              </h3>
-              <p className="text-xs text-emerald-300/90 leading-relaxed">
-                The document has been securely stored outside the public webroot. Status set to <span className="font-semibold uppercase text-emerald-300">"uploaded"</span> and irrevocable audit event <span className="font-semibold uppercase text-emerald-300">"DOCUMENT_UPLOADED"</span> logged.
+              </h4>
+              <p className="text-xs text-emerald-800 leading-relaxed">
+                The land record has been securely stored and computed with SHA-256 checksum. An irrevocable audit event was recorded.
               </p>
-              <div className="pt-2 text-xs font-mono text-emerald-400/90">
+              <div className="text-xs font-mono text-emerald-800 pt-1">
                 Computed SHA-256:{' '}
-                <span className="bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-500/20 break-all select-all">
+                <span className="bg-white px-2 py-0.5 rounded border border-emerald-200 break-all select-all font-semibold text-slate-900">
                   {uploadSuccess.sha256_hash}
                 </span>
               </div>
             </div>
           </div>
-          <div className="pt-2 flex flex-wrap items-center gap-3">
-            <Link
-              to={`/documents/${uploadSuccess.id}`}
-              className="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-xs flex items-center gap-1.5 shadow-md shadow-emerald-600/20"
-            >
-              Inspect Document & Timeline <ArrowRight className="w-3.5 h-3.5" />
+          <div className="pt-1 flex flex-wrap items-center gap-2.5">
+            <Link to={`/documents/${uploadSuccess.id}`}>
+              <Button
+                variant="primary"
+                size="sm"
+                icon={<ArrowRight className="w-3.5 h-3.5" />}
+                iconPosition="right"
+              >
+                Inspect Document & Workbench
+              </Button>
             </Link>
-            <button
-              onClick={resetForm}
-              className="px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-medium border border-slate-700"
-            >
+            <Button variant="ghost" size="sm" onClick={resetForm}>
               Upload Another Record
-            </button>
+            </Button>
           </div>
         </div>
       )}
 
-      {/* Validation Error Alert */}
+      {/* =================================================================== */}
+      {/* VALIDATION ERROR ALERT                                              */}
+      {/* =================================================================== */}
       {validationError && (
-        <div className="p-4 rounded-xl bg-rose-500/10 border border-rose-500/20 text-rose-300 text-xs flex items-center gap-2.5">
-          <AlertCircle className="w-4 h-4 shrink-0 text-rose-400" />
+        <div className="p-3.5 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs flex items-center gap-2.5 animate-fade-in">
+          <AlertCircle className="w-4 h-4 shrink-0 text-red-600" />
           <span>{validationError}</span>
         </div>
       )}
 
-      {/* Upload Form */}
+      {/* =================================================================== */}
+      {/* UPLOAD FORM                                                         */}
+      {/* =================================================================== */}
       <form onSubmit={handleSubmit} className="space-y-6">
-        {/* Drag & Drop Card */}
-        <div
-          onDragEnter={handleDrag}
-          onDragLeave={handleDrag}
-          onDragOver={handleDrag}
-          onDrop={handleDrop}
-          className={`border-2 border-dashed rounded-2xl p-8 text-center transition-all ${
-            dragActive
-              ? 'border-emerald-500 bg-emerald-500/10'
-              : file
-              ? 'border-emerald-500/50 bg-slate-900/90'
-              : 'border-slate-700 bg-slate-900/50 hover:border-slate-600'
-          }`}
-        >
-          <input
-            ref={fileInputRef}
-            type="file"
-            id="file-upload-input"
-            accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png"
-            onChange={handleFileChange}
-            className="hidden"
-          />
+        {/* ================================================================= */}
+        {/* DROP ZONE WITH FILE PREVIEW AND PROGRESS matching 3.png           */}
+        {/* ================================================================= */}
+        <input
+          ref={fileInputRef}
+          type="file"
+          id="file-upload-input"
+          accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png"
+          onChange={handleFileChange}
+          className="hidden"
+        />
 
-          {file ? (
-            <div className="flex flex-col items-center">
-              <div className="w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-3 shadow-lg shadow-emerald-500/10">
-                <FileCheck className="w-7 h-7" />
-              </div>
-              <div className="text-sm font-semibold text-white max-w-md truncate">{file.name}</div>
-              <div className="text-xs text-slate-400 mt-1 font-mono">
-                {(file.size / (1024 * 1024)).toFixed(2)} MB &bull; {file.type || 'Verified Binary'}
-              </div>
-              <div className="mt-4 flex items-center gap-2">
-                <button
-                  type="button"
-                  onClick={() => fileInputRef.current?.click()}
-                  className="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs border border-slate-700 transition"
+        {file ? (
+          /* File Selected Preview matching 3.png */
+          <div className="border-2 border-dashed border-blue-200 bg-white rounded-2xl p-6 transition-all shadow-2xs">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              {/* File Info Card inside Drop Zone */}
+              <div className="border border-slate-200 rounded-xl p-3 bg-white flex items-center gap-3.5 shadow-2xs flex-1 max-w-md w-full">
+                {/* Red PDF / Blue IMG Badge */}
+                <div
+                  className={`w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold text-xs shrink-0 tracking-wider ${
+                    file.name.toLowerCase().endsWith('.pdf')
+                      ? 'bg-[#ef4444]'
+                      : 'bg-[#044eed]'
+                  }`}
                 >
-                  Change File
-                </button>
+                  {file.name.toLowerCase().endsWith('.pdf') ? 'PDF' : 'IMG'}
+                </div>
+
+                {/* File Details */}
+                <div className="min-w-0 flex-1">
+                  <div
+                    className="text-sm font-semibold text-slate-800 truncate"
+                    title={file.name}
+                  >
+                    {file.name}
+                  </div>
+                  <div className="text-xs text-slate-400 mt-0.5 font-medium">
+                    {(file.size / (1024 * 1024)).toFixed(1)} MB
+                  </div>
+                </div>
+
+                {/* Green checkmark circle */}
+                <div className="w-7 h-7 rounded-full bg-[#dcfce7] text-[#16a34a] flex items-center justify-center shrink-0">
+                  <Check className="w-4 h-4 stroke-[2.5]" />
+                </div>
+
+                {/* Remove file button */}
                 <button
                   type="button"
                   onClick={() => setFile(null)}
-                  className="p-1.5 rounded-lg bg-slate-800 hover:bg-rose-500/20 text-slate-400 hover:text-rose-400 border border-slate-700 transition"
-                  title="Remove selection"
+                  className="text-slate-400 hover:text-slate-600 p-1 rounded-md hover:bg-slate-100 transition cursor-pointer"
+                  title="Remove file"
+                  aria-label="Remove selected file"
                 >
                   <X className="w-4 h-4" />
                 </button>
               </div>
-            </div>
-          ) : (
-            <div className="flex flex-col items-center">
-              <div className="w-14 h-14 rounded-2xl bg-slate-800/80 border border-slate-700 flex items-center justify-center text-slate-400 mb-3 group-hover:text-emerald-400">
-                <UploadCloud className="w-7 h-7 text-emerald-400" />
+
+              {/* "Choose another file" button on right */}
+              <div className="flex flex-col items-start sm:items-end shrink-0">
+                <Button
+                  variant="secondary"
+                  onClick={() => fileInputRef.current?.click()}
+                >
+                  Choose another file
+                </Button>
+                <span className="text-[11px] text-slate-400 mt-1">
+                  PDF, JPG or PNG (max 10 MB)
+                </span>
               </div>
-              <div className="text-base font-medium text-white mb-1">
-                Drag and drop your land record scan here
+            </div>
+
+            {/* Upload Progress Bar */}
+            {isUploading && (
+              <div className="mt-4 pt-4 border-t border-slate-100 space-y-2">
+                <div className="flex items-center justify-between text-xs text-slate-600 font-medium">
+                  <span className="flex items-center gap-2">
+                    <div className="w-3.5 h-3.5 border-2 border-blue-600/30 border-t-[#044eed] rounded-full animate-spin" />
+                    Uploading & computing SHA-256 checksum...
+                  </span>
+                  <span className="font-mono text-[#044eed] font-bold">
+                    {uploadProgress}%
+                  </span>
+                </div>
+                <div className="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                  <div
+                    className="bg-[#044eed] h-full rounded-full transition-all duration-300"
+                    style={{ width: `${uploadProgress}%` }}
+                  />
+                </div>
+              </div>
+            )}
+          </div>
+        ) : (
+          /* Empty Drop Zone matching 3.png */
+          <div
+            onDragEnter={handleDrag}
+            onDragLeave={handleDrag}
+            onDragOver={handleDrag}
+            onDrop={handleDrop}
+            onClick={() => fileInputRef.current?.click()}
+            className={`border-2 border-dashed rounded-2xl p-10 text-center transition-all cursor-pointer shadow-2xs ${
+              dragActive
+                ? 'border-[#044eed] bg-blue-50/50'
+                : 'border-slate-300 hover:border-[#044eed] bg-white'
+            }`}
+          >
+            <div className="flex flex-col items-center">
+              <div className="w-12 h-12 rounded-xl bg-blue-50 text-[#044eed] flex items-center justify-center mb-3">
+                <UploadCloud className="w-6 h-6" />
+              </div>
+              <div className="text-sm font-semibold text-slate-800 mb-1">
+                Drag and drop your land record here, or click to browse
               </div>
               <p className="text-xs text-slate-400 mb-4">
-                Strict binary MIME validation: <span className="text-slate-200">PDF, JPG, PNG only</span> (Max 10 MB limit)
+                Strict binary validation:{' '}
+                <span className="text-slate-600 font-medium">
+                  PDF, JPG or PNG
+                </span>{' '}
+                (max 10 MB limit)
               </p>
-              <button
+              <Button
+                variant="secondary"
+                size="sm"
                 type="button"
-                onClick={() => fileInputRef.current?.click()}
-                className="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-medium border border-slate-700 shadow-sm transition"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  fileInputRef.current?.click();
+                }}
               >
-                Browse Files
-              </button>
-            </div>
-          )}
-        </div>
-
-        {/* Upload Progress Bar */}
-        {isUploading && (
-          <div className="p-4 rounded-xl bg-slate-900 border border-slate-800 space-y-2">
-            <div className="flex items-center justify-between text-xs text-slate-300">
-              <span className="flex items-center gap-2">
-                <div className="w-3.5 h-3.5 border-2 border-emerald-500/20 border-t-emerald-500 rounded-full animate-spin" />
-                Uploading & computing SHA-256 checksum...
-              </span>
-              <span className="font-mono text-emerald-400">{uploadProgress}%</span>
-            </div>
-            <div className="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
-              <div
-                className="bg-emerald-500 h-full rounded-full transition-all duration-300"
-                style={{ width: `${uploadProgress}%` }}
-              />
+                Choose file
+              </Button>
             </div>
           </div>
         )}
 
-        {/* Land Record Metadata Fields */}
-        <div className="p-6 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-4">
-          <div className="flex items-center gap-2 pb-3 border-b border-slate-800 text-sm font-semibold text-white">
-            <Layers className="w-4 h-4 text-emerald-400" />
-            <span>Cadastral Metadata & Territorial Attributes</span>
+        {/* ================================================================= */}
+        {/* RECORD DETAILS FORM matching 3.png                                */}
+        {/* ================================================================= */}
+        <div className="bg-white rounded-2xl border border-slate-200 p-6 space-y-6 shadow-2xs">
+          <div>
+            <h2 className="text-base font-bold text-slate-900 tracking-tight">
+              Record details
+            </h2>
+            <p className="text-xs text-slate-500 mt-0.5">
+              Provide basic information about this land record to help with processing.
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {/* Record Type */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4">
+            {/* Record type */}
             <div>
-              <label className="block text-xs font-medium text-slate-300 mb-1.5">
-                Record Type / Document Category
+              <label
+                htmlFor="record-type"
+                className="block text-xs font-semibold text-slate-800 mb-1.5"
+              >
+                Record type <span className="text-red-500">*</span>
               </label>
               <select
+                id="record-type"
                 value={recordType}
                 onChange={(e) => setRecordType(e.target.value)}
-                className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-800 focus:border-emerald-500 text-sm text-slate-200 outline-none transition"
+                className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 bg-white text-xs text-slate-800 focus:outline-none focus:border-[#044eed] focus:ring-2 focus:ring-blue-500/20 cursor-pointer"
               >
-                <option value="Khatauni (ROR - Record of Rights)">Khatauni (ROR - Record of Rights)</option>
-                <option value="Khasra (Field Book / Survey)">Khasra (Field Book / Survey)</option>
+                <option value="Khatauni (खतौनी)">Khatauni (खतौनी)</option>
+                <option value="Khasra (खसरा / Field Book)">Khasra (खसरा / Field Book)</option>
                 <option value="1359 Fasli Archive Record">1359 Fasli Archive Record</option>
-                <option value="Bhu-Naksha (Cadastral Map)">Bhu-Naksha (Cadastral Map)</option>
-                <option value="Deed of Sale / Registry">Deed of Sale / Registry</option>
+                <option value="Bhu-Naksha (भू-नक्शा / Cadastral Map)">Bhu-Naksha (भू-नक्शा / Cadastral Map)</option>
               </select>
+              <p className="text-[11px] text-slate-500 mt-1">
+                Select the type of land record you are uploading.
+              </p>
             </div>
 
             {/* District */}
             <div>
-              <label className="block text-xs font-medium text-slate-300 mb-1.5">
-                District (जि़ला)
+              <label
+                htmlFor="district"
+                className="block text-xs font-semibold text-slate-800 mb-1.5"
+              >
+                District (जिला) <span className="text-red-500">*</span>
               </label>
-              <input
-                type="text"
+              <select
+                id="district"
                 value={district}
                 onChange={(e) => setDistrict(e.target.value)}
-                placeholder="e.g. Lucknow (Synthetic)"
-                className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-800 focus:border-emerald-500 text-sm text-slate-200 outline-none transition"
-              />
+                className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 bg-white text-xs text-slate-800 focus:outline-none focus:border-[#044eed] focus:ring-2 focus:ring-blue-500/20 cursor-pointer"
+              >
+                <option value="Lucknow (Synthetic)">Lucknow (Synthetic)</option>
+                <option value="Barabanki (Synthetic)">Barabanki (Synthetic)</option>
+                <option value="Sitapur (Synthetic)">Sitapur (Synthetic)</option>
+                <option value="Unnao (Synthetic)">Unnao (Synthetic)</option>
+              </select>
+              <p className="text-[11px] text-slate-500 mt-1">
+                Select the district where the land is located.
+              </p>
             </div>
 
             {/* Tehsil */}
             <div>
-              <label className="block text-xs font-medium text-slate-300 mb-1.5">
-                Tehsil (तहसील)
+              <label
+                htmlFor="tehsil"
+                className="block text-xs font-semibold text-slate-800 mb-1.5"
+              >
+                Tehsil (तहसील) <span className="text-red-500">*</span>
               </label>
-              <input
-                type="text"
+              <select
+                id="tehsil"
                 value={tehsil}
                 onChange={(e) => setTehsil(e.target.value)}
-                placeholder="e.g. Bakshi Ka Talab (Synthetic)"
-                className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-800 focus:border-emerald-500 text-sm text-slate-200 outline-none transition"
-              />
+                className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 bg-white text-xs text-slate-800 focus:outline-none focus:border-[#044eed] focus:ring-2 focus:ring-blue-500/20 cursor-pointer"
+              >
+                <option value="Bakshi Ka Talab">Bakshi Ka Talab</option>
+                <option value="Malihabad">Malihabad</option>
+                <option value="Mohanlalganj">Mohanlalganj</option>
+                <option value="Sadar">Sadar</option>
+              </select>
+              <p className="text-[11px] text-slate-500 mt-1">
+                Select the tehsil where the land is located.
+              </p>
             </div>
 
             {/* Village */}
             <div>
-              <label className="block text-xs font-medium text-slate-300 mb-1.5">
-                Village / Gram Panchayat (गाँव)
+              <label
+                htmlFor="village"
+                className="block text-xs font-semibold text-slate-800 mb-1.5"
+              >
+                Village (गाँव) <span className="text-red-500">*</span>
               </label>
-              <input
-                type="text"
+              <select
+                id="village"
                 value={village}
                 onChange={(e) => setVillage(e.target.value)}
-                placeholder="e.g. Syntheticpur"
-                className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-800 focus:border-emerald-500 text-sm text-slate-200 outline-none transition"
-              />
+                className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 bg-white text-xs text-slate-800 focus:outline-none focus:border-[#044eed] focus:ring-2 focus:ring-blue-500/20 cursor-pointer"
+              >
+                <option value="Syntheticpur">Syntheticpur</option>
+                <option value="Alinagar">Alinagar</option>
+                <option value="Chandpur">Chandpur</option>
+                <option value="Rampur">Rampur</option>
+              </select>
+              <p className="text-[11px] text-slate-500 mt-1">
+                Select the village where the land is located.
+              </p>
+            </div>
+
+            {/* Unsupported fields with "Coming soon" tooltip per prompt requirement */}
+            <div>
+              <label className="block text-xs font-semibold text-slate-500 mb-1.5">
+                Language (भाषा)
+              </label>
+              <Tooltip content="Language selection coming soon (Default: Hindi)">
+                <select
+                  disabled
+                  defaultValue="Hindi (हिन्दी / Devnagari)"
+                  className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 bg-slate-50 text-xs text-slate-400 cursor-not-allowed"
+                >
+                  <option value="Hindi (हिन्दी / Devnagari)">Hindi (हिन्दी / Devnagari)</option>
+                  <option value="English">English</option>
+                </select>
+              </Tooltip>
+              <p className="text-[11px] text-slate-400 mt-1">
+                OCR document recognition language.
+              </p>
+            </div>
+
+            <div>
+              <label className="block text-xs font-semibold text-slate-500 mb-1.5">
+                Attach to case (मामला)
+              </label>
+              <Tooltip content="Direct case attachment during upload coming soon">
+                <select
+                  disabled
+                  defaultValue="None (Standalone record)"
+                  className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 bg-slate-50 text-xs text-slate-400 cursor-not-allowed"
+                >
+                  <option value="None (Standalone record)">None (Standalone record)</option>
+                </select>
+              </Tooltip>
+              <p className="text-[11px] text-slate-400 mt-1">
+                Associate this upload directly with an active dispute case.
+              </p>
             </div>
           </div>
 
-          {/* Restriction Toggle */}
+          {/* =============================================================== */}
+          {/* RESTRICT-ACCESS TOGGLE matching 3.png                           */}
+          {/* =============================================================== */}
           <div className="pt-2">
-            <label className="flex items-center gap-3 p-3 rounded-xl bg-slate-950 border border-slate-800 hover:border-slate-700 cursor-pointer transition">
+            <label className="flex items-start gap-2.5 cursor-pointer select-none">
               <input
                 type="checkbox"
                 checked={isRestricted}
                 onChange={(e) => setIsRestricted(e.target.checked)}
-                className="w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 bg-slate-900 border-slate-700"
+                className="mt-0.5 w-4 h-4 rounded text-[#044eed] border-slate-300 focus:ring-blue-500 cursor-pointer"
               />
-              <div className="flex-1">
-                <div className="text-xs font-medium text-slate-200 flex items-center gap-1.5">
-                  <Lock className="w-3.5 h-3.5 text-amber-400" />
-                  Mark as Restricted / Confidential Record
-                </div>
-                <div className="text-[11px] text-slate-400">
-                  When enabled, Citizen Viewers will be denied access and will receive a 404 (zero metadata leakage).
-                </div>
+              <div>
+                <span className="text-xs font-semibold text-slate-900 block">
+                  Restrict access to this record
+                </span>
+                <span className="text-xs text-slate-500 block mt-0.5">
+                  Only authorised users (clerks, reviewers and admins) can view this record.
+                </span>
               </div>
             </label>
           </div>
-        </div>
 
-        {/* Privacy & Legal Warning Box */}
-        <div className="p-4 rounded-xl bg-slate-900/80 border border-slate-800 text-xs text-slate-400 space-y-1">
-          <div className="flex items-center gap-1.5 font-semibold text-slate-300">
-            <Info className="w-4 h-4 text-emerald-400" />
-            Security & Sandbox Storage Notice
+          {/* =============================================================== */}
+          {/* SECURITY & SANDBOX STORAGE NOTICE BOX matching 3.png            */}
+          {/* =============================================================== */}
+          <div className="bg-[#eff6ff] border border-blue-200/80 rounded-xl p-4 flex items-start gap-3 text-xs text-[#1e40af]">
+            <Info className="w-4 h-4 text-[#2563eb] shrink-0 mt-0.5" />
+            <div>
+              <p className="font-semibold text-[#1e3a8a] text-xs">
+                Uploaded files are stored securely and used only for digitisation and verification within BhuVerify.
+              </p>
+              <p className="text-slate-600 text-[11px] mt-0.5 leading-relaxed">
+                This is a demo system with synthetic data. Do not upload real personal or sensitive documents.
+              </p>
+            </div>
           </div>
-          <p className="leading-relaxed">
-            Uploaded specimens are isolated in private filesystem directories outside of all public HTTP assets. Files are cryptographically fingerprinted with SHA-256 for non-repudiation and tracked in the append-only ledger.
-          </p>
-        </div>
 
-        {/* Submit Actions */}
-        <div className="flex items-center justify-end gap-3 pt-2">
-          <button
-            type="button"
-            onClick={resetForm}
-            disabled={isUploading}
-            className="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-sm font-medium border border-slate-700 transition"
-          >
-            Clear
-          </button>
-          <button
-            type="submit"
-            disabled={!file || isUploading}
-            className="px-6 py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-medium text-sm shadow-lg shadow-emerald-600/20 border border-emerald-500/30 flex items-center gap-2 disabled:opacity-50 transition"
-          >
-            {isUploading ? (
-              <>
-                <div className="w-4 h-4 border-2 border-white/20 border-t-white rounded-full animate-spin" />
-                Ingesting Document...
-              </>
-            ) : (
-              <>
-                <UploadCloud className="w-4 h-4" /> Ingest & Sign Record
-              </>
-            )}
-          </button>
+          {/* =============================================================== */}
+          {/* ACTION BUTTONS matching 3.png                                   */}
+          {/* =============================================================== */}
+          <div className="flex items-center justify-end gap-3 pt-2">
+            <Button
+              variant="ghost"
+              onClick={resetForm}
+              disabled={isUploading}
+            >
+              Clear
+            </Button>
+
+            <Button
+              variant="secondary"
+              comingSoon
+              comingSoonText="Save as draft coming soon"
+              disabled
+            >
+              Save as draft
+            </Button>
+
+            <Button
+              variant="primary"
+              type="submit"
+              loading={isUploading}
+              disabled={!file || isUploading}
+              className="bg-[#061b6a] hover:bg-[#041450] text-white"
+            >
+              {isUploading ? 'Uploading...' : 'Upload'}
+            </Button>
+          </div>
         </div>
       </form>
     </div>

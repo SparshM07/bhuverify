@@ -12,6 +12,7 @@ import ReviewWorkbenchPage from './pages/ReviewWorkbenchPage';
 import PublicVerifyPage from './pages/PublicVerifyPage';
 import CasesPage from './pages/CasesPage';
 import AdminPage from './pages/AdminPage';
+import SearchPage from './pages/SearchPage';
 
 export default function App() {
   return (
@@ -32,6 +33,7 @@ export default function App() {
           >
             <Route path="/" element={<Navigate to="/dashboard" replace />} />
             <Route path="/dashboard" element={<DashboardPage />} />
+            <Route path="/search" element={<SearchPage />} />
             <Route path="/cases" element={<CasesPage />} />
             
             {/* Upload is Clerk / Admin only */}
